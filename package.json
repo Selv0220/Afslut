@@ -1,0 +1,24 @@
+{
+  "name": "botanica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --output-style compressed -o css/ css/ --source-map true",
+    "watch": "onchange \"css/*.scss\" -- npm run sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Selv0220/Botanica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Selv0220/Botanica/issues"
+  },
+  "homepage": "https://github.com/Selv0220/Botanica#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "onchange": "^7.1.0"
+  }
+}

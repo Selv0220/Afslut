@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    background-color: #1d1e22;
+}
+.parallax {
+    position: relative;
+    height: 100vh;
+    background: #E8E1D6;
+    background-image:
+            url(https://astelun.com/Botanica/images/404.png),
+            url(https://astelun.com/Botanica/images/leafy_big.png),
+            url(https://astelun.com/Botanica/images/blad_logo2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+}
+h1 {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #EA9071;
+    font-family: "Arial";
+    text-transform: uppercase;
+    opacity: .8;
+    font-size: 70px;
+}

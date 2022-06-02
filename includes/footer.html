@@ -1,0 +1,104 @@
+<!-- Instruktion til webbrowser om at vi kører HTML5 -->
+<!DOCTYPE html>
+
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - det ser brugeren ikke, men det fortæller noget om siden -->
+<head>
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Sigende titel</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/Bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+    .col-md-4{
+        text-align: center;
+    }
+</style>
+
+<body>
+
+<footer class="footer" style="background-color:#50694A; font-family: 'Playfair Display'; color: white">
+    <div class="container-lg py-5">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h3 class="contact">Kontakt</h3>
+                <p>
+                    <span class="iconLabel">
+                        <i class="fas fa-map-pin"></i>
+                        <a class="text-decoration-none text-white"
+                           href="#"
+                           target="_blank"
+                           rel="noreferrer"
+                        >Ballerup Centret 12, 2750 Ballerup</a>
+                    </span>
+
+                    <br>
+                    <span class="iconLabel">
+                        <i class="fas fa-phone"></i>
+                        44 44 01 44
+                    </span>
+
+                    <br>
+                    <span class="iconLabel">
+                        <i class="fas fa-envelope"></i>
+                        Botanicaivs@hotmail.com
+                    </span>
+
+                    <br>
+                    <span class="iconLabel">
+                        <i class="fas fa-barcode"></i>
+                        CVR: 36048492
+                    </span>
+                </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="footer-openingHours-container">
+                    <h3 class="openingHours"> Åbningstider </h3>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="normalDays">Hverdage</td>
+                            <td>10:00 - 19:00</td>
+                        </tr>
+                        <tr>
+                            <td class="saturday">Lørdag</td>
+                            <td>10:00 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td class="sunday">Søndag</td>
+                            <td>10:00 - 17:00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 footer-some">
+                <h3 class="followUs">Følg os</h3>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

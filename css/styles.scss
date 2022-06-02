@@ -1,0 +1,52 @@
+$Beibg:#EFE8DE;
+$Beihead:#F7F4F1;
+$Green:#50694A;
+$Blue:#C5E2E8;
+$Org:#EA9071;
+
+.icon-blad{
+  background-image: url("images/blad_logo.png");
+  background-position: center center;
+}
+
+.hero{
+  background: $Green;
+}
+
+.col-sm{
+  padding: 2.5rem;
+  background-color: #50694A;
+  border: none;
+  color: black;
+  text-align: center;
+  margin: 60px;
+}
+
+.button{
+  height: 50px;
+  padding: 0;
+  background: $Green;
+  border-color: $Beibg;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Playfair Display";
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button:hover{
+  background: #EA9071;
+}
+
+.button__text{
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  color: white;
+  height: 100%;
+}
+
+.section-header{
+  text-align: center;
+}
