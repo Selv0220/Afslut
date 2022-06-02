@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: localhost:8889
--- Genereringstid: 02. 06 2022 kl. 11:48:51
+-- Genereringstid: 02. 06 2022 kl. 11:57:48
 -- Serverversion: 5.7.32
 -- PHP-version: 7.4.12
 
@@ -20,10 +20,9 @@ SET time_zone = "+00:00";
 -- Struktur-dump for tabellen `produkter`
 --
 
-DROP TABLE IF EXISTS `produkter`;
 CREATE TABLE `produkter` (
   `prodId` int(10) UNSIGNED NOT NULL,
-  `prodCatagoryId` varchar(100) COLLATE utf16_danish_ci NOT NULL,
+  `prodCatagoryId` int(11) NOT NULL,
   `prodNavn` varchar(100) COLLATE utf16_danish_ci NOT NULL,
   `prodBeskrivelse` text COLLATE utf16_danish_ci,
   `prodPris` decimal(9,2) NOT NULL,
@@ -35,47 +34,47 @@ CREATE TABLE `produkter` (
 --
 
 INSERT INTO `produkter` (`prodId`, `prodCatagoryId`, `prodNavn`, `prodBeskrivelse`, `prodPris`, `prodBillede`) VALUES
-(1, '0', 'Roser', 'De rødeste roser du nogensinde har set (eller pengene tilbage)', '50.00', NULL),
-(2, '0', 'Ananas', '<p>Smagfuld ananas</p>', '125.00', NULL),
-(3, '0', 'Sukkulenter', '<p>Det er vist mere en busk frem for en rigtig blomst</p>', '100.00', NULL),
-(4, '0', 'Violer', '<p>Roser er r&oslash;de, de her blomster er bl&aring;</p>', '45.00', NULL),
-(5, '0', 'Kaktus', '<p>Pas p&aring;! Den stikker</p>', '50.00', NULL),
-(6, '0', 'Ananasplante', '<p>Den stikker</p>', '200.00', 'Frugt.png'),
-(7, '1', 'Brudebuket', '<p>Brudebuket i hvide farver, med roser, eucalyptus, silkeroser mm.</p>', '950.00', 'Brudebuket.jpg'),
-(8, '1', 'Brudebuket', '<p>Brudebuket i hvide farver med roser, silkeroser, r&aelig;vehale, eucalyptus mm.</p>', '1000.00', 'Brudebuket1.jpg'),
-(9, 'Bryllup', 'Brudebuket', '<p>Brudebuket i lyse farver bundet med ranukler</p>', '950.00', 'Brudebuket2.jpg'),
-(10, 'Bryllup', 'Brudebuket', '<p>Brudebuket i hvide farver med buskroser, ranukler, eucalyptus mm.</p>', '1000.00', 'Brudebuket3.jpg'),
-(11, 'Bryllup', 'Brudebuket', '<p>H&aring;ndbundet brudebuket med hvide roser og brudesl&oslash;r</p>', '900.00', 'Brudebuket4.jpg'),
-(12, 'Bryllup', 'Brudebuket', '<p>H&aring;ndbundet brudebuket kun med hvide roser</p>', '850.00', 'Brudebuket5.jpg'),
-(13, 'Bryllup', 'Brudebuket', '<p>Dr&aring;bebuket i ladyholder i lyse farver, med roser, silkeroser, eucalyptus, astrantia mm.</p>', '1500.00', 'Brudebuket6.jpg'),
-(14, 'Bryllup', 'Brudepige', '<p>Brudepige buket bundet i mindre st&oslash;rrelse, af samme blomster som brudens.</p>', '450.00', 'Brudepige.jpg'),
-(15, 'Bryllup', 'Hårkrans', '<p>H&aring;rkrans i lyser&oslash;d med brudesl&oslash;r</p>', '350.00', 'Hårkrans.jpg'),
-(16, 'Bryllup', 'Hårkrans', '<p>H&aring;rkrans i hvide og bl&aring; farver, med silkeroser, kornblomst, brudesl&oslash;r og eucalyptus</p>', '450.00', 'Hårkrans1.jpg'),
-(17, 'Bryllup', 'Hårkrans', '<p>H&aring;rkrans i hvide og lime farver med silkeroser, tidsler, brudesl&oslash;r, voksblomst og eucalyptus</p>', '350.00', 'Hårkrans2.jpg'),
-(18, 'Bryllup', 'Knaphulsbuket', '<p>Knaphulsbuket med hvid rose, brudesl&oslash;r og eucalyptus</p>', '125.00', 'Knaphuls.jpg'),
-(19, 'Bryllup', 'Knaphulsbuket', '<p>Knaphulsbuket i rosa farve, med rose, silkerose og kornblomst</p>', '125.00', 'Knaphuls1.jpg'),
-(20, 'Bryllup', 'Knaphulsbuket', '<p>Knaphulsbuket i hvid farve med rose, silkeroser og brudesl&oslash;r</p>', '125.00', 'Knaphuls2.jpg'),
-(21, 'Bryllup', 'Knaphulsbuket', '<p>Knaphulsbuket i hvid farve med rose, freshia og eucalyptus</p>', '125.00', 'Knaphuls3.jpg'),
-(22, 'Bryllup', 'Brudebuket', '<p>Brudebuket med m&oslash;rker&oslash;d hortensia, eucalyptus og orkider</p>', '850.00', 'Brudebuket7.jpg'),
-(23, 'Bryllup', 'Brudepige', '<p>Brudepige buket i lyser farver, med samme blomster som brudebuketten</p>', '450.00', 'Brudepige1.jpg'),
-(24, 'Bryllup', 'Knaphulsbuket', '<p>Knaphulsbuket med m&oslash;rker&oslash;d hortensia, eucalyptus og orkide</p>', '125.00', 'Knaphuls4.jpg'),
-(25, 'Begravelse', 'Båredekoration', '<p>B&aring;redekoration i dr&aring;beform, i orange farver med roser, gerbera, nelikker mm.</p>', '1250.00', 'Båredekoration.jpg'),
-(26, 'Begravelse', 'Båredekoration', '<p>Hjerte i r&oslash;de og lyser&oslash;de farver, med blandet afsk&aring;rne</p>', '1500.00', 'Båredekoration1.jpg'),
-(27, 'Begravelse', 'Båredekoration', '<p>Hjerte i lyser&oslash;de og lilla farver, med roser, clemetis, nelliker mm.</p>', '600.00', 'Båredekoration2.jpg'),
-(28, 'Begravelse', 'Båredekoration', '<p>Hjerte i hvide farver med roser, brudesl&oslash;r hypericum mm.</p>', '550.00', 'Båredekoration3.jpg'),
-(29, 'Begravelse', 'Båredekoration', '<p>Hjerte kun med r&oslash;de roser og hjerteranker</p>', '850.00', 'Båredekoration4.jpg'),
-(30, 'Begravelse', 'Båredekoration', '<p>Hjerte kun med roser i forskellige farver</p>', '700.00', 'Båredekoration5.jpg'),
-(31, 'Begravelse', 'Kistepynt', '<p>Kistepynt i for&aring;rs farver</p>', '2500.00', 'Kistepynt.jpg'),
-(32, 'Begravelse', 'Kistepynt', '<p>Kistepynt i lyser&oslash;de farver</p>', '2800.00', 'Kistepynt1.jpg'),
-(33, 'Begravelse', 'Kistepynt', '<p>Kistepynt med sommerblomster</p>', '2000.00', 'Kistepynt2.jpg'),
-(34, 'Begravelse', 'Kistepynt', '<p>Kistepynt i pink/lyser&oslash;d og creme farver</p>', '2800.00', 'Kistepynt3.jpg'),
-(35, 'Begravelse', 'Kistepynt', '<p>Kistepynt i r&oslash;de, hvide og bl&aring; farver</p>', '2200.00', 'Kistepynt4.jpg'),
-(36, 'Begravelse', 'Krans', '<p>Salal krans i hvide farver med liljer, roser, chrysantimum mm.</p>', '1500.00', 'Krans.jpg'),
-(37, 'Begravelse', 'Krans', '<p>Tuya krans i hvide farver med roser, liljer, gerbera mm.</p>', '1250.00', 'Krans1.jpg'),
-(38, 'Begravelse', 'Krans', '<p>Oasis krans i hvide og lyser&oslash;de farver, med blandet afsk&aring;rne</p>', '1800.00', 'Oasiskrans.jpg'),
-(39, 'Begravelse', 'Krans', '<p>Oasis krans i friske farver med roser, gerbera, nelliker mm.</p>', '850.00', 'Oasiskrans1.jpg'),
-(40, 'Begravelse', 'Krans', '<p>Oasis krans i hvide og lime farver med blandet afsk&aring;rne</p>', '1200.00', 'Oasiskrans2.jpg'),
-(41, 'Begravelse', 'Krans', '<p>Oasis krans i hvide og bl&aring; farver, med roser, perle hyrasinter mm.</p>', '950.00', 'Oasiskrans3.jpg');
+(1, 0, 'Roser', 'De rødeste roser du nogensinde har set (eller pengene tilbage)', '50.00', NULL),
+(2, 0, 'Ananas', '<p>Smagfuld ananas</p>', '125.00', NULL),
+(3, 0, 'Sukkulenter', '<p>Det er vist mere en busk frem for en rigtig blomst</p>', '100.00', NULL),
+(4, 0, 'Violer', '<p>Roser er r&oslash;de, de her blomster er bl&aring;</p>', '45.00', NULL),
+(5, 0, 'Kaktus', '<p>Pas p&aring;! Den stikker</p>', '50.00', NULL),
+(6, 0, 'Ananasplante', '<p>Den stikker</p>', '200.00', 'Frugt.png'),
+(7, 1, 'Brudebuket', '<p>Brudebuket i hvide farver, med roser, eucalyptus, silkeroser mm.</p>', '950.00', 'Brudebuket.jpg'),
+(8, 1, 'Brudebuket', '<p>Brudebuket i hvide farver med roser, silkeroser, r&aelig;vehale, eucalyptus mm.</p>', '1000.00', 'Brudebuket1.jpg'),
+(9, 1, 'Brudebuket', '<p>Brudebuket i lyse farver bundet med ranukler</p>', '950.00', 'Brudebuket2.jpg'),
+(10, 1, 'Brudebuket', '<p>Brudebuket i hvide farver med buskroser, ranukler, eucalyptus mm.</p>', '1000.00', 'Brudebuket3.jpg'),
+(11, 1, 'Brudebuket', '<p>H&aring;ndbundet brudebuket med hvide roser og brudesl&oslash;r</p>', '900.00', 'Brudebuket4.jpg'),
+(12, 1, 'Brudebuket', '<p>H&aring;ndbundet brudebuket kun med hvide roser</p>', '850.00', 'Brudebuket5.jpg'),
+(13, 1, 'Brudebuket', '<p>Dr&aring;bebuket i ladyholder i lyse farver, med roser, silkeroser, eucalyptus, astrantia mm.</p>', '1500.00', 'Brudebuket6.jpg'),
+(14, 1, 'Brudepige', '<p>Brudepige buket bundet i mindre st&oslash;rrelse, af samme blomster som brudens.</p>', '450.00', 'Brudepige.jpg'),
+(15, 1, 'Hårkrans', '<p>H&aring;rkrans i lyser&oslash;d med brudesl&oslash;r</p>', '350.00', 'Hårkrans.jpg'),
+(16, 1, 'Hårkrans', '<p>H&aring;rkrans i hvide og bl&aring; farver, med silkeroser, kornblomst, brudesl&oslash;r og eucalyptus</p>', '450.00', 'Hårkrans1.jpg'),
+(17, 1, 'Hårkrans', '<p>H&aring;rkrans i hvide og lime farver med silkeroser, tidsler, brudesl&oslash;r, voksblomst og eucalyptus</p>', '350.00', 'Hårkrans2.jpg'),
+(18, 1, 'Knaphulsbuket', '<p>Knaphulsbuket med hvid rose, brudesl&oslash;r og eucalyptus</p>', '125.00', 'Knaphuls.jpg'),
+(19, 1, 'Knaphulsbuket', '<p>Knaphulsbuket i rosa farve, med rose, silkerose og kornblomst</p>', '125.00', 'Knaphuls1.jpg'),
+(20, 1, 'Knaphulsbuket', '<p>Knaphulsbuket i hvid farve med rose, silkeroser og brudesl&oslash;r</p>', '125.00', 'Knaphuls2.jpg'),
+(21, 1, 'Knaphulsbuket', '<p>Knaphulsbuket i hvid farve med rose, freshia og eucalyptus</p>', '125.00', 'Knaphuls3.jpg'),
+(22, 1, 'Brudebuket', '<p>Brudebuket med m&oslash;rker&oslash;d hortensia, eucalyptus og orkider</p>', '850.00', 'Brudebuket7.jpg'),
+(23, 1, 'Brudepige', '<p>Brudepige buket i lyser farver, med samme blomster som brudebuketten</p>', '450.00', 'Brudepige1.jpg'),
+(24, 1, 'Knaphulsbuket', '<p>Knaphulsbuket med m&oslash;rker&oslash;d hortensia, eucalyptus og orkide</p>', '125.00', 'Knaphuls4.jpg'),
+(25, 2, 'Båredekoration', '<p>B&aring;redekoration i dr&aring;beform, i orange farver med roser, gerbera, nelikker mm.</p>', '1250.00', 'Båredekoration.jpg'),
+(26, 2, 'Båredekoration', '<p>Hjerte i r&oslash;de og lyser&oslash;de farver, med blandet afsk&aring;rne</p>', '1500.00', 'Båredekoration1.jpg'),
+(27, 2, 'Båredekoration', '<p>Hjerte i lyser&oslash;de og lilla farver, med roser, clemetis, nelliker mm.</p>', '600.00', 'Båredekoration2.jpg'),
+(28, 2, 'Båredekoration', '<p>Hjerte i hvide farver med roser, brudesl&oslash;r hypericum mm.</p>', '550.00', 'Båredekoration3.jpg'),
+(29, 2, 'Båredekoration', '<p>Hjerte kun med r&oslash;de roser og hjerteranker</p>', '850.00', 'Båredekoration4.jpg'),
+(30, 2, 'Båredekoration', '<p>Hjerte kun med roser i forskellige farver</p>', '700.00', 'Båredekoration5.jpg'),
+(31, 2, 'Kistepynt', '<p>Kistepynt i for&aring;rs farver</p>', '2500.00', 'Kistepynt.jpg'),
+(32, 2, 'Kistepynt', '<p>Kistepynt i lyser&oslash;de farver</p>', '2800.00', 'Kistepynt1.jpg'),
+(33, 2, 'Kistepynt', '<p>Kistepynt med sommerblomster</p>', '2000.00', 'Kistepynt2.jpg'),
+(34, 2, 'Kistepynt', '<p>Kistepynt i pink/lyser&oslash;d og creme farver</p>', '2800.00', 'Kistepynt3.jpg'),
+(35, 2, 'Kistepynt', '<p>Kistepynt i r&oslash;de, hvide og bl&aring; farver</p>', '2200.00', 'Kistepynt4.jpg'),
+(36, 2, 'Krans', '<p>Salal krans i hvide farver med liljer, roser, chrysantimum mm.</p>', '1500.00', 'Krans.jpg'),
+(37, 2, 'Krans', '<p>Tuya krans i hvide farver med roser, liljer, gerbera mm.</p>', '1250.00', 'Krans1.jpg'),
+(38, 2, 'Krans', '<p>Oasis krans i hvide og lyser&oslash;de farver, med blandet afsk&aring;rne</p>', '1800.00', 'Oasiskrans.jpg'),
+(39, 2, 'Krans', '<p>Oasis krans i friske farver med roser, gerbera, nelliker mm.</p>', '850.00', 'Oasiskrans1.jpg'),
+(40, 2, 'Krans', '<p>Oasis krans i hvide og lime farver med blandet afsk&aring;rne</p>', '1200.00', 'Oasiskrans2.jpg'),
+(41, 2, 'Krans', '<p>Oasis krans i hvide og bl&aring; farver, med roser, perle hyrasinter mm.</p>', '950.00', 'Oasiskrans3.jpg');
 
 --
 -- Begrænsninger for dumpede tabeller
