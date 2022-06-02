@@ -92,7 +92,7 @@
 </script>
 -->
 
-<!-- Gør header større under scroll
+
 <script>
     window.onscroll = function() {scrollFunction()};
 
@@ -105,7 +105,7 @@
     }
 
 </script>
--->
+
 
 </body>
 </html>

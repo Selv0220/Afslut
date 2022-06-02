@@ -33,8 +33,8 @@
 <body>
 
 
-<div class="m-0 p-0">
-<img src="images/annie-spratt-unsplash.jpg" class="bagved img-fluid m-0" style="position: fixed">
+<div class="m-0 p-0 d-flex flex-row-reverse">
+<img src="images/dum_plante.png" class="bagved m-0" style="position: fixed">
 </div>
 
 
