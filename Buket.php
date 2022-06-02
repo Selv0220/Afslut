@@ -18,6 +18,9 @@
     <meta property="og:image" content="" />
     <meta property="og:description" content="Oversigt over produkter" />
 
+    <link href="//css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/moseholm/css/styles.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -29,12 +32,12 @@
             <div class="row">
                 <div class="col-12 col-lg-10 offset-lg-2">
                     <h2 class="page-feature-header">
-                        Økologisk og lokalt
+                        Alle produkter
 
                     </h2>
                     <p class="page-feature-teaser">
-                        Alle produkter i vores gårdbutik er fremstillet på vores gård og er <strong>100 %
-                            økologiske</strong>.
+                       .. <strong>100 %
+                            ...</strong>.
                         <br>
                         Vi ønsker at bekæmpe <strong>madspil</strong>, så hos os finder du krumme agurker og
                         skæve løg.
@@ -62,7 +65,7 @@
     <?php include "includes/footer.html"; ?>
 </div>
 
-<script type="module" src="/js/products.js"></script>
+<script type="module" src="js/products.js"></script>
 </body>
 
 </html>

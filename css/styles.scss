@@ -80,3 +80,243 @@ $Org:#EA9071;
 .bodybg3{
   background: $Green;
 }
+
+#pageContainer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#pageContent {
+  padding-top: calc(#{$headerHeight--mobile} + 2rem);
+  padding-bottom: 2rem;
+  @media (min-width: 992px) {
+    padding-top: calc(#{$headerHeight--desktop} + 2rem);
+    padding-bottom: 2rem;
+  }
+}
+
+#pageContent.pageContent--disableSpacing {
+  padding-top: $headerHeight--mobile;
+  @media (min-width: 992px) {
+    padding-top: $headerHeight--desktop !important;
+  }
+}
+
+.page-feature-header {
+  text-align: left;
+  color: $customPrimary;
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-feature-teaser {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.shown:not(.spinner) {
+  visibility: visible !important;
+}
+
+.hidden:not(.spinner) {
+  visibility: hidden !important;
+}
+
+.shown.spinner {
+  display: unset !important;
+}
+
+.hidden.spinner {
+  display: none !important;
+}
+
+//CATEGORY-OVERVIEW
+
+.category-overview-container {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+.category-overview-item {
+  background-color: $custom-brown;
+  position: relative;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: $transitionTime ease-in-out transform;
+
+  &:hover {
+    background-color: $customPrimary;
+    color: $customLight;
+    transform: scale(1.025);
+    i:not(:first-of-type) {
+      color: $customLight;
+      display: unset;
+      position: absolute;
+      top: 0.5rem;
+    }
+    i {
+      color: $customLight;
+    }
+  }
+  i {
+    font-size: 2rem;
+    color: $customSecondary;
+  }
+  i:not(:first-of-type) {
+    color: red;
+    display: none;
+    position: absolute;
+    top: 50%;
+    animation-fill-mode: forwards !important;
+    animation-duration: 0.75s !important;
+  }
+  i:nth-child(2) {
+    animation: spread-1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  i:nth-child(3) {
+    animation: spread-2;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  i:nth-child(4) {
+    animation: spread-3;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  i:nth-child(5) {
+    animation: whirlwind-right-1;
+    transform: translate(50%, -50%);
+    right: 50%;
+  }
+  i:nth-child(6) {
+    animation: whirlwind-right-2;
+    transform: translate(50%, -50%);
+    right: 50%;
+  }
+  i:nth-child(7) {
+    animation: whirlwind-right-3;
+    transform: translate(50%, -50%);
+    color: purple;
+    right: 50%;
+  }
+}
+
+#clearFilterButton {
+  padding: 0;
+  font-size: 0.9rem;
+  color: $custom-gray--darken;
+}
+
+// PRODUCTS;
+
+.product-container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.product-category-button {
+  display: inline-block;
+  font-family: $font-family;
+  background-color: $custom-gray;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  width: 49%;
+  margin-bottom: 0.25rem;
+  text-align: left;
+
+  &:nth-child(even) {
+    margin-left: 1%;
+  }
+  &:nth-child(odd) {
+    margin-right: 1%;
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+  i {
+    color: transparent;
+    margin-right: 0.5rem;
+  }
+  &.selected i {
+    color: $customSecondary;
+  }
+  &:hover {
+    background-color: $customPrimary;
+    color: $customLight;
+  }
+}
+
+.product-item {
+  background-color: $custom-brown;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  height: 100%;
+  box-shadow: $boxShadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .product-item-category {
+    display: inline-block;
+    background-color: $custom-gray;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-item-image {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+  .product-item-title {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .product-item-weight {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .product-item-price {
+    padding: 0.5rem 0;
+    padding-top: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  .product-item-priceContainer {
+    .product-item-shopNotification {
+      background-color: $customLight;
+      margin-bottom: 0.15rem;
+      padding: 0 0.25rem;
+      font-size: 0.85rem;
+      text-align: right;
+      color: $danger;
+    }
+  }
+}
