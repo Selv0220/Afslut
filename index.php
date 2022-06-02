@@ -18,8 +18,8 @@
     <meta name="copyright" content="Information om copyright">
 
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href="css/Bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
@@ -29,61 +29,83 @@
 
 </head>
 <body>
-<div class="container-fluid hero" style="font-family: 'Playfair Display'">
-    <div class="row">
-        <a class="col-2">
-            <button type="button" class="button">
-                <span class="button__text" href="#">Klik her</span>
-            </button>
-        </a>
-        <a class="col-3 px-3">
-            <img src="images/Varer.jpg" class="img-fluid">
-        </a>
-    </div>
-</div>
 
 
 <?php include "includes/navigation.html"; ?>
 
-<h5 class="section-header" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5>
 
-<div class="container-md" style="font-family: 'Playfair Display'">
+<div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
     <div class="row">
+        <div class="col-6 text-center my-auto">
+            <button type="button" class="button">
+                <a class="button__text text-decoration-none" href="#Hertil">Klik her</a>
+            </button>
+        </div>
+        <div class="col-6 m-0 p-0 toppen">
+            <img src="images/hero_varer.jpg" class="img-fluid float-end vh-100">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="py-5" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5></div>
+
+<div class="container-fluid valgF" style="font-family: 'Playfair Display'">
+    <div class="row mx-auto">
         <div class="col-sm text-white">Buketter</div>
         <div class="col-sm text-white">Bryllup</div>
         <div class="col-sm text-white">Begravelse</div>
     </div>
-    <div class="row">
+    <div class="row mx-auto">
         <div class="col-sm text-white">Anledning</div>
         <div class="col-sm text-white">Tilbehør</div>
         <div class="col-sm text-white">Om os</div>
     </div>
 </div>
 
-<div class="box text-center py-3" style="background-color:#F7F4F1; font-family: 'Playfair Display'; color: black"
-    <div class="box-body">
-        <h5 class="card-title">Besøg os fordi...</h5>
-        <p class="fas fa-check-square"> ...</p> <br>
-        <p class="fas fa-check-square"> ...</p> <br>
-        <p class="fas fa-check-square"> ...</p> <br>
-        <p class="fas fa-check-square"> ...</p> <br>
-    </div>
+<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black"
+<div class="box-body">
+    <h5 class="card-title">Besøg os fordi...</h5>
+    <ul><img src="images/blad_logo.png" width="22"> Vi har blomster</ul>
+    <ul><img src="images/blad_logo.png" width="22"> Vi har mange blomster</ul>
+    <ul><img src="images/blad_logo.png" width="22"> Vi har rigtig mange blomster</ul>
+    <ul><img src="images/blad_logo.png" width="22"> Vi har ikke nogle blomster</ul>
+</div>
 </div>
 
 <?php include "includes/footer.html"; ?>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
-</script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- tinyMCE edittor
-
-<form method="post">
-    <textarea id="mytextarea">Hello, World!</textarea>
-</form>
+<!-- gør hero usynlig
 <script>
-    tinymce.init({
-        selector: '#mytextarea'
-    });
+    var heroBg = document.getElementById('bg')
+    window.addEventListener('scroll', function (){
+        heroBg.style.opacity = 1 - +window.pageYOffset/600+''
+        heroBg.style.top = +window.pageYOffset+'px'
+        heroBg.style.backgroundPositionY = +window.pageYOffset
+            /2+'px'
+    })
+
+</script>
 -->
+
+<!-- Gør header større under scroll
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
+            document.getElementById("header").style.width = "250px";
+        } else {
+            document.getElementById("header").style.width = "150px";
+        }
+    }
+
+</script>
+-->
+
 </body>
 </html>

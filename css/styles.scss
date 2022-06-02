@@ -4,6 +4,14 @@ $Green:#50694A;
 $Blue:#C5E2E8;
 $Org:#EA9071;
 
+#Hertil{
+  background: $Beihead;
+}
+
+.valgF{
+  background: $Beihead;
+}
+
 .icon-blad{
   background-image: url("images/blad_logo.png");
   background-position: center center;
@@ -37,6 +45,7 @@ $Org:#EA9071;
 
 .button:hover{
   background: #EA9071;
+  color: #ffffff;
 }
 
 .button__text{
@@ -49,4 +58,24 @@ $Org:#EA9071;
 
 .section-header{
   text-align: center;
+}
+
+#header {
+  trasition: 0.2s;
+}
+
+
+.bagved{
+  position: fixed;
+  z-index: -1;
+}
+
+.bodybg1{
+  background: $Blue;
+}
+.bodybg2{
+  background: $Org;
+}
+.bodybg3{
+  background: $Green;
 }
