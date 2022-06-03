@@ -22,22 +22,29 @@
     <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
     <link href="css/Bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/fail.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://cdn.tiny.cloud/1/0a3ztzprally0eprqc4f0p37jzfzfl9xv6koxshqie43g1k6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
 </head>
 <body>
+
+<div class="m-0 p-0 d-flex flex-row-reverse">
+    <img src="images/dum_plante.png" class="bagved m-0" style="position: fixed">
+</div>
+
+
+<div class="bg-white">
 <?php include "includes/navigation.html"; ?>
 
-<div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
+<div class="container-fluid hero" style="font-family: 'Playfair Display'" id="hero">
     <div class="row">
         <div class="col-6 text-center my-auto">
             <button type="button" class="button">
-                <a class="button__text text-decoration-none flyv" href="#Hertil" id="dynamic">Klik her</a>
+                <a class="button__text text-decoration-none flyv" href="#Hertil">Klik her</a>
             </button>
         </div>
         <div class="col-6 m-0 p-0 toppen">
@@ -45,6 +52,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="container-fluid valgF py-5" style="font-family: 'Playfair Display'">
     <h5 class="section-header py-5 my-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5>
@@ -63,10 +71,10 @@
 <div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
     <h5 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Besøg os fordi...</h5>
     <div class="box-body pb-2">
-        <ul><img src="images/blad_logo.png" width="22"> Vi har blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22"> Vi har mange blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22"> Vi har rigtig mange blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22"> Vi har ikke nogle blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har rigtig mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har ikke nogle blomster</ul>
     </div>
 </div>
 
@@ -95,29 +103,33 @@
         </button>
     </div>
 </div>
-
+</div>
 <?php include "includes/footer.html"; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Tilføj class når man scroller
 <script>
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 150) {
-            $('#dynamic').addClass('newClass');
-        } else {
-            $('#dynamic').removeClass('newClass');
-        }
-    });
+  $(window).scroll(function(){
+     if ($(this).scrollTop() > 350) {
+         $('#dynamic').addClass('newClass');
+     } else {
+         $('#dynamic').removeClass('newClass');
+     }
+ });
 </script>
+-->
 
 <script>
-    var heroBg = document.getElementById('bg')
+    <!-- Hero forsvinder -->
+    var heroBg = document.getElementById('hero')
     window.addEventListener('scroll', function (){
         heroBg.style.opacity = 1 - +window.pageYOffset/650+''
         heroBg.style.top = +window.pageYOffset+'px'
         heroBg.style.backgroundPositionY = +window.pageYOffset
             /2+'px'
     })
+
 </script>
 
 </body>

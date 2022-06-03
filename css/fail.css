@@ -20,6 +20,14 @@ h1{
     background-position: 50% 50%;
 }
 
+.bg-white{
+    display: none;
+}
+
+.navbar{
+    z-index: 2;
+}
+
 @media (min-width: 992px) {
     #parallax {
         position: relative;
@@ -35,5 +43,17 @@ h1{
     }
     h1{
         display: none;
+    }
+
+    .bg-white{
+        display: block;
+    }
+
+    .tiny{
+        display: none;
+    }
+
+    .kat:hover{
+        background-color: #EA9071;
     }
 }
