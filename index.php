@@ -12,6 +12,8 @@
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>Botanica</title>
 
+    <link rel="icon" href="images/blad_logo.png">
+
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -29,83 +31,94 @@
 
 </head>
 <body>
-
-
 <?php include "includes/navigation.html"; ?>
-
 
 <div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
     <div class="row">
         <div class="col-6 text-center my-auto">
             <button type="button" class="button">
-                <a class="button__text text-decoration-none" href="#Hertil">Klik her</a>
+                <a class="button__text text-decoration-none flyv" href="#Hertil" id="dynamic">Klik her</a>
             </button>
         </div>
         <div class="col-6 m-0 p-0 toppen">
-            <img src="images/hero_varer.jpg" class="img-fluid float-end vh-100">
+            <img src="images/annie-splash.png" class="img-fluid float-end vh-100">
         </div>
     </div>
 </div>
 
-
-
-
-<div class="py-5" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5></div>
-
-<div class="container-fluid valgF" style="font-family: 'Playfair Display'">
+<div class="container-fluid valgF py-5" style="font-family: 'Playfair Display'">
+    <h5 class="section-header py-5 my-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5>
     <div class="row mx-auto">
-        <div class="col-sm text-white">Buketter</div>
-        <div class="col-sm text-white">Bryllup</div>
-        <div class="col-sm text-white">Begravelse</div>
+        <button class="col-sm text-white my-3 kat">Buketter</button>
+        <button class="col-sm text-white my-3 kat">Bryllup</button>
+        <button class="col-sm text-white my-3 kat">Begravelse</button>
     </div>
     <div class="row mx-auto">
-        <div class="col-sm text-white">Anledning</div>
-        <div class="col-sm text-white">Tilbehør</div>
-        <div class="col-sm text-white">Om os</div>
+        <button class="col-sm text-white my-3 kat">Anledning</button>
+        <button class="col-sm text-white my-3 kat">Tilbehør</button>
+        <button class="col-sm text-white my-3 kat">Om os</button>
     </div>
 </div>
 
-<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black"
-<div class="box-body">
-    <h5 class="card-title">Besøg os fordi...</h5>
-    <ul><img src="images/blad_logo.png" width="22"> Vi har blomster</ul>
-    <ul><img src="images/blad_logo.png" width="22"> Vi har mange blomster</ul>
-    <ul><img src="images/blad_logo.png" width="22"> Vi har rigtig mange blomster</ul>
-    <ul><img src="images/blad_logo.png" width="22"> Vi har ikke nogle blomster</ul>
+<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
+    <h5 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Besøg os fordi...</h5>
+    <div class="box-body pb-2">
+        <ul><img src="images/blad_logo.png" width="22"> Vi har blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22"> Vi har mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22"> Vi har rigtig mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22"> Vi har ikke nogle blomster</ul>
+    </div>
 </div>
+
+<div class="valgF py-5">
+    <h5 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Se her!</h5>
+    <div id="carouselExampleDark" class="carousel slide carousel-dark carousel-fade col-lg-4 mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="images/annie-splash.png" class="d-block w-75 mx-auto" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/hero_varer.jpg" class="d-block w-75 mx-auto" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 </div>
 
 <?php include "includes/footer.html"; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- gør hero usynlig
+<script>
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 150) {
+            $('#dynamic').addClass('newClass');
+        } else {
+            $('#dynamic').removeClass('newClass');
+        }
+    });
+</script>
+
 <script>
     var heroBg = document.getElementById('bg')
     window.addEventListener('scroll', function (){
-        heroBg.style.opacity = 1 - +window.pageYOffset/600+''
+        heroBg.style.opacity = 1 - +window.pageYOffset/650+''
         heroBg.style.top = +window.pageYOffset+'px'
         heroBg.style.backgroundPositionY = +window.pageYOffset
             /2+'px'
     })
-
 </script>
--->
-
-
-<script>
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
-            document.getElementById("header").style.width = "250px";
-        } else {
-            document.getElementById("header").style.width = "150px";
-        }
-    }
-
-</script>
-
 
 </body>
 </html>

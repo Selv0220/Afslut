@@ -1,15 +1,39 @@
 body{
     margin: 0;
 }
+
+h1{
+    color: #EA9071;
+    font-size: 12vw;
+    font-family: "Playfair Display";
+}
+
 #parallax {
     position: relative;
     height: 100vh;
     background: #E8E1D6;
     background-image:
-            url(https://astelun.com/Botanica/images/404.png),
             url(https://astelun.com/Botanica/images/leafy_big.png),
             url(https://astelun.com/Botanica/images/blad_logo2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;
+}
+
+@media (min-width: 992px) {
+    #parallax {
+        position: relative;
+        height: 100vh;
+        background: #E8E1D6;
+        background-image:
+                url(https://astelun.com/Botanica/images/404.png),
+                url(https://astelun.com/Botanica/images/leafy_big.png),
+                url(https://astelun.com/Botanica/images/blad_logo2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: 50% 50%;
+    }
+    h1{
+        display: none;
+    }
 }
