@@ -4,6 +4,18 @@ $Green:#50694A;
 $Blue:#C5E2E8;
 $Org:#EA9071;
 
+html {
+  scroll-behavior: smooth;
+}
+
+.newClass {
+  color: hotpink;
+}
+
+.foto{
+  z-index: 2;
+}
+
 #Hertil{
   background: $Beihead;
 }
@@ -48,12 +60,20 @@ $Org:#EA9071;
   color: #ffffff;
 }
 
+.kat:hover{
+  background: #EA9071;
+  color: #ffffff;
+}
+
 .button__text{
   display: inline-flex;
   align-items: center;
   padding: 0 24px;
   color: white;
   height: 100%;
+}
+.button__text:hover{
+  color: #ffffff;
 }
 
 .section-header{
@@ -64,10 +84,13 @@ $Org:#EA9071;
   trasition: 0.2s;
 }
 
+.flyv{
+  trasition: 0.2s;
+}
 
 .bagved{
   position: fixed;
-  z-index: -2;
+  z-index: -1;
   height: 100vh;
 }
 

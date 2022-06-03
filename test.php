@@ -12,6 +12,8 @@
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>Botanica</title>
 
+    <link rel="icon" href="images/blad_logo.png">
+
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -26,15 +28,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://cdn.tiny.cloud/1/0a3ztzprally0eprqc4f0p37jzfzfl9xv6koxshqie43g1k6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
+    <style>
+        body {
+            background-image: url('images/annie-spratt-unsplash.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
-<style>
-</style>
-<body>
+<body style="background: #f6f6f8">
 
-
-<div class="m-0 p-0 d-flex flex-row-reverse">
-<img src="images/dum_plante.png" class="bagved m-0" style="position: fixed">
+<div class="m-0 p-0 d-flex flex-row-reverse	.d-none">
+<img src="images/annie-spratt-unsplash.jpg" class="bagved m-0" style="position: fixed">
 </div>
 
 
@@ -46,6 +53,13 @@
     </div>
     </div>
 <br>
+
+<nav class="navbar navbar-light col-6">
+    <div class="container-fluid bg-success">
+        <a class="navbar-brand" href="#">Fixed top</a>
+    </div>
+</nav>
+
 <div class="container-sm my-5">
 <div class="card col-4">
     <div class="card-body bodybg1 px-0 pb-5">
