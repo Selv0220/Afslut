@@ -79,7 +79,6 @@
 
 <br class="my-5"><br class="my-5">
 <br class="my-5"><br class="my-5">
-<br class="my-5"><br class="my-5">
 
 <div class="container-sm my-5 mx-5">
 <div class="card col-4">
