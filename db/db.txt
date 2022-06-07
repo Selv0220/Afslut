@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: localhost:8889
--- Genereringstid: 02. 06 2022 kl. 11:57:48
+-- Genereringstid: 07. 06 2022 kl. 10:08:23
 -- Serverversion: 5.7.32
 -- PHP-version: 7.4.12
 

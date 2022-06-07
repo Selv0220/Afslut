@@ -19,49 +19,26 @@
     <meta property="og:description" content="Oversigt over produkter" />
 
     <link href="//css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/moseholm/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-<div id="pageContainer">
-    <?php include "includes/navigation.html"; ?>
-    <div id="pageContent">
+<?php include "includes/navigation.html"; ?>
 
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-12 col-lg-10 offset-lg-2">
-                    <h2 class="page-feature-header">
-                        Alle produkter
+<div class="container-fluid valgF py-5" style="font-family: 'Playfair Display'">
+    <h5 class="section-header py-5 my-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5>
 
-                    </h2>
-                    <p class="page-feature-teaser">
-                       .. <strong>100 %
-                            ...</strong>.
-                        <br>
-                        Vi ønsker at bekæmpe <strong>madspil</strong>, så hos os finder du krumme agurker og
-                        skæve løg.
-                        <br>
-                        <br>
-                        Vores produkter kan købes i <strong>webshoppen</strong> eller <strong>fysisk</strong> i
-                        vores hyggelige gårdbutik.
-                    </p>
-                </div>
+    <div id="categoriesContainer" class="col-12 col-lg-2 pt-2">
+    </div>
+    <div class="col-12 col-lg-10">
+        <div id="productsContainer" class="row g-2"> </div>
 
-                <div id="categoriesContainer" class="col-12 col-lg-2 pt-2">
-                </div>
-
-                <div class="col-12 col-lg-10">
-                    <div id="productsContainer" class="row g-2">
-                    </div>
-
-                    <div class="spinner hidden" id="productSpinner">
-                        <i class="fas fa-tractor fa-spin "></i>
-                    </div>
-                </div>
-            </div>
+        <div class="spinner hidden" id="productSpinner">
+            <i class="fas fa-tractor fa-spin "></i>
         </div>
     </div>
+
     <?php include "includes/footer.html"; ?>
 </div>
 
