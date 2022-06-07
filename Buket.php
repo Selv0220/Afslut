@@ -12,6 +12,8 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
 
     <title>Botanica - Blomster butik</title>
 
+    <link rel="icon" href="images/blad_logo.png">
+
     <!--META -->
     <meta name="robots" content="All" />
     <meta name="author" content="Udgiver" />
