@@ -12,6 +12,8 @@
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>Botanica</title>
 
+    <link rel="icon" href="images/beaut.png">
+
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
