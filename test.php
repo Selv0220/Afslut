@@ -35,7 +35,7 @@
 
 
 <div class="m-0 p-0 d-flex flex-row-reverse">
-    <img src="images/dum_plante.png" class="bagved m-0" style="position: fixed">
+    <img src="images/dum_plante.png" class="bagved m-0 p-0" style="position: fixed">
 </div>
 
 
@@ -55,8 +55,6 @@
         </div>
     </div>
     <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
     <br class="my-5"><br class="my-5">
     <br class="my-5"><br class="my-5">
     <br class="my-5"><br class="my-5">
@@ -151,8 +149,6 @@
     <!-- mellemrum -->
     <br class="my-5"><br class="my-5">
 </div>
-
-
 
 
 <!-- Lille slutter -->
@@ -251,7 +247,7 @@
 
     var logosBg = document.getElementById('logos')
     window.addEventListener('scroll', function (){
-        logosBg.style.opacity = 1 - +window.pageYOffset/350+''
+        logosBg.style.opacity = 1 - +window.pageYOffset/250+''
         logosBg.style.top = +window.pageYOffset+'px'
         logosBg.style.backgroundPositionY = +window.pageYOffset
             /2+'px'
@@ -259,7 +255,7 @@
 
     var knapsBg = document.getElementById('knaps')
     window.addEventListener('scroll', function (){
-        knapsBg.style.opacity = 1 - +window.pageYOffset/700+''
+        knapsBg.style.opacity = 1 - +window.pageYOffset/600+''
         knapsBg.style.top = +window.pageYOffset+'px'
         knapsBg.style.backgroundPositionY = +window.pageYOffset
             /2+'px'

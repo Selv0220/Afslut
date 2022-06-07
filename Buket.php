@@ -1,3 +1,9 @@
+<?php
+require "settings/init.php";
+
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 
@@ -18,7 +24,7 @@
     <meta property="og:image" content="" />
     <meta property="og:description" content="Oversigt over produkter" />
 
-    <link href="//css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -33,16 +39,18 @@
     </div>
     <div class="col-12 col-lg-10">
         <div id="productsContainer" class="row g-2"> </div>
-
+        <?php
+        foreach ($produkter as $produkt){
+        echo "<h2>" . $produkt->prodNavn . "</h2><br>" . $produkt->prodBeskrivelse;}
+            ?>
         <div class="spinner hidden" id="productSpinner">
             <i class="fas fa-tractor fa-spin "></i>
         </div>
     </div>
-
-    <?php include "includes/footer.html"; ?>
 </div>
 
 <script type="module" src="js/products.js"></script>
+<?php include "includes/footer.html"; ?>
 </body>
 
 </html>
