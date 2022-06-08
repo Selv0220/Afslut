@@ -33,17 +33,11 @@
 </head>
 <body>
 
-
-<div class="m-0 p-0 d-flex flex-row-reverse">
-    <img src="images/dum_plante.png" class="bagved m-0 p-0" style="position: fixed">
-</div>
-
-
-
-
-
 <!-- Lille starter -->
 <div class="tiny">
+    <div class="m-0 p-0 d-flex flex-row-reverse">
+        <img src="images/dum_plante.png" class="bagved m-0 p-0" style="position: fixed">
+    </div>
     <div class="container mt-5 pt-5 bg-transparent" id="logos">
         <br class="my-5"><br class="my-5">
         <br class="my-5"><br class="my-5">
@@ -64,12 +58,10 @@
 
     <div class="container-fluid bg-transparent" id="knaps">
         <div class="row">
-            <div class="col-6 text-center my-auto mx-auto">
+            <div class="col-2 text-center my-auto mx-auto p-md-4">
                 <a href="#Ned">
                     <button class="mx-auto text-center bg-transparent border-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
-                        </svg>
+                        <img src="images/downer.png" class="img-thumbnail mx-auto text-center bg-transparent border-0">
                     </button>
                 </a>
             </div>
@@ -82,7 +74,7 @@
     <br class="my-5"><br class="my-5">
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg1 px-0 pb-5">
                 <h3 class="card-title text-center">Buketter</h3>
                 <img src="images/IC_buket.jpg" class="card-img-top p-2" style="background: white">
@@ -93,7 +85,7 @@
     <br class="my-5"><br class="my-5">
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg2 px-0 pb-5">
                 <h3 class="card-title text-center">Bryllup</h3>
                 <img src="images/DF_bryl.jpg" class="card-img-top p-2" style="background: white">
@@ -105,7 +97,7 @@
 
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg3 px-0 pb-5">
                 <h3 class="card-title text-center">Begravelse</h3>
                 <img src="images/RL_grav.jpg" class="card-img-top p-2" style="background: white">
@@ -116,7 +108,7 @@
     <br class="my-5"><br class="my-5">
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg1 px-0 pb-5">
                 <h3 class="card-title text-center">Anledning</h3>
                 <img src="images/AS_valen.jpg" class="card-img-top p-2" style="background: white">
@@ -127,7 +119,7 @@
     <br class="my-5"><br class="my-5" id="Ned">
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg2 px-0 pb-5">
                 <h3 class="card-title text-center">Tilbehør</h3>
                 <img src="images/EK_choco.jpg" class="card-img-top p-2" style="background: white">
@@ -138,7 +130,7 @@
     <br class="my-5"><br class="my-5">
 
     <div class="container-sm my-5 mx-5">
-        <div class="card col-4">
+        <div class="card col-5">
             <div class="card-body bodybg3 px-0 pb-5">
                 <h3 class="card-title text-center">Om os</h3>
                 <img src="images/Varer.jpg" class="card-img-top p-2" style="background: white">

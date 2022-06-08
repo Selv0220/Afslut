@@ -7,6 +7,12 @@ $Org:#EA9071;
 $transitionTime: 0.05s;
 $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
+.footer{
+  background-color: $Green;
+  font-family: "Playfair Display";
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
