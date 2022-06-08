@@ -150,75 +150,101 @@
 
 <!-- Stor starter -->
 
+<div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
+    <div class="row">
+        <div class="col-lg-6 text-center my-auto">
+            <div class="navbar-brand border-0 col-lg-7 mx-auto" style="background-color: #F7F4F1; border-radius: 35px">
+                <img src="images/BLogo.png" class="logo col-10">
+            </div>
 
-
-
-<div class="bg-white">
-    <?php include "includes/navigation.html"; ?>
-
-    <div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
-        <div class="row">
-            <div class="col-6 text-center my-auto">
-                <button type="button" class="button">
-                    <a class="button__text text-decoration-none flyv" href="#Hertil">Klik her</a>
+            <a href="#Nede">
+                <button class="navbar-brand border-0 col-lg-1 bg-transparent py-5">
+                    <img src="images/downer.png" class="logo col-12">
                 </button>
-            </div>
-            <div class="col-6 m-0 p-0 toppen">
-                <img src="images/annie-splash.png" class="img-fluid float-end vh-100">
-            </div>
+            </a>
+
+        </div>
+        <div class="col-6 m-0 p-0 toppen">
+            <img src="images/annie-splash.png" class="img-fluid vh-100 float-lg-end">
         </div>
     </div>
+</div>
 
 
-    <div class="container-fluid valgF py-5" style="font-family: 'Playfair Display'">
-        <h5 class="section-header py-5 my-5" style="font-family: 'Playfair Display'; color: black">Vores produkter</h5>
-        <div class="row mx-auto">
-            <button class="col-sm text-white my-3 kat">Buketter</button>
-            <button class="col-sm text-white my-3 kat">Bryllup</button>
-            <button class="col-sm text-white my-3 kat">Begravelse</button>
-        </div>
-        <div class="row mx-auto">
-            <button class="col-sm text-white my-3 kat">Anledning</button>
-            <button class="col-sm text-white my-3 kat">Tilbehør</button>
-            <button class="col-sm text-white my-3 kat">Om os</button>
-        </div>
-    </div>
+<?php include "includes/navigation.html"; ?>
 
-    <div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
-        <h5 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Besøg os fordi...</h5>
-        <div class="box-body pb-2">
-            <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har blomster</ul>
-            <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har mange blomster</ul>
-            <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har rigtig mange blomster</ul>
-            <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har ikke nogle blomster</ul>
+<div class="container-fluid py-5 col-8 col-lg-12" style="font-family: 'Playfair Display'">
+    <h3 class="section-header my-5" style="font-family: 'Playfair Display'; color: black">Produktkategorier</h3>
+
+    <div class="row">
+    <div class="card col-lg-3 p-0 m-5">
+        <div class="card-body bodybg1">
+            <h3 class="card-title text-center">Buketter</h3>
+            <img src="images/IC_buket.jpg" class="card-img-top">
         </div>
     </div>
+    <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card-body bodybg3">
+            <h3 class="card-title text-center">Bryllup</h3>
+            <img src="images/DF_bryl.jpg" class="card-img-top">
+        </div>
+    </div>
+    <div class="card col-lg-3 p-0 m-5">
+        <div class="card-body bodybg2">
+            <h3 class="card-title text-center">Begravelse</h3>
+            <img src="images/RL_grav.jpg" class="card-img-top">
+        </div>
+    </div>
+    <div class="card col-lg-3 p-0 m-5">
+        <div class="card-body bodybg2">
+            <h3 class="card-title text-center">Anledning</h3>
+            <img src="images/AS_valen.jpg" class="card-img-top">
+        </div>
+    </div>
+    <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card-body bodybg1">
+            <h3 class="card-title text-center">Tilbehør</h3>
+            <img src="images/EK_choco.jpg" class="card-img-top">
+        </div>
+    </div>
+</div>
+</div>
 
-    <div class="valgF py-5">
-        <h5 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Se her!</h5>
-        <div id="carouselExampleDark" class="carousel slide carousel-dark carousel-fade col-lg-4 mx-auto" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
+    <h5 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Besøg os fordi...</h5>
+    <div class="box-body pb-2">
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har rigtig mange blomster</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har ikke nogle blomster</ul>
+    </div>
+</div>
+
+<div class="valgF py-5">
+    <h5 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Se her!</h5>
+    <div id="carouselExampleDark" class="carousel slide carousel-dark carousel-fade col-lg-4 mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="images/annie-splash.png" class="d-block w-75 mx-auto" alt="...">
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="images/annie-splash.png" class="d-block w-75 mx-auto" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="images/hero_varer.jpg" class="d-block w-75 mx-auto" alt="...">
-                </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="images/hero_varer.jpg" class="d-block w-75 mx-auto" alt="...">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</div>
 </div>
 
 <!-- Stor slutter -->
@@ -228,6 +254,18 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+    var smartnav = document.getElementById("smartnav");
+    window.onscroll = function (){
+        if(window.pageYOffset > smartnav.offsetTop){
+            smartnav.classList.add("sticky");
+        }
+        else{
+            smartnav.classList.remove("sticky");
+        }
+    }
+</script>
+<script>
+
     <!-- Hero forsvinder -->
     var heroBg = document.getElementById('bg')
     window.addEventListener('scroll', function (){
