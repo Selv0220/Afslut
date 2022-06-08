@@ -1,9 +1,7 @@
 <?php
 require "settings/init.php";
 
-$sql =
-    "SELECT * FROM products P LEFT JOIN categories C on P.prodCategoryId = C.catId WHERE 1=1 ";
-$bind = [];
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 
 if (isset($_GET["categories"])) {
     $categoriesArray = explode(",", $_GET["categories"]);

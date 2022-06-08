@@ -1,11 +1,34 @@
-import { ProductController } from "../controllers/productController.js";
-import { ProductModel } from "../models/productModel.js";
-import { ProductsView } from "../views/productsView.js";
+export default class produkter{
+    constructor() {
+        this.rootElem = document.querySelector('.produkter');
+    }
 
-const categoryRoot = document.getElementById("categoriesContainer");
-const productsRoot = document.getElementById("productsContainer");
+    async init(){
+        await this.render();
+    }
 
-const productsModel = new ProductModel();
-const productsView = new ProductsView(categoryRoot, productsRoot);
+    async render(){
+        const data = await this.getData();
+        console.log(data)
 
-const productsController = new ProductController(productsModel, productsView);
+        const row = document.createElement('div');
+
+        for(const item of data){
+            const col =document.createElement('div');
+            col.classList.add('col-6');
+
+            col.innerHTML =''
+
+            ;
+
+            row.appendChild(col);
+        }
+
+        this.rootElem.appendChild(row);
+    }
+
+    async getData(){
+        const response =await fetch('products.json');
+        return await response.json();
+    }
+}

@@ -1,33 +1,124 @@
-<!-- Instruktion til webbrowser om at vi kører HTML5 -->
-<!DOCTYPE html>
+<?php
+require "settings/init.php";
 
-<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
+?>
+
+<!DOCTYPE html>
 <html lang="da">
 
-<!-- I <head> har man opsætning - det ser brugeren ikke, men det fortæller noget om siden -->
 <head>
-    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
-    <!-- Titel som ses oppe i browserens tab mv. -->
-    <title>Sigende titel</title>
+    <title>Botanica - Blomster butik</title>
 
-    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
-    <meta name="robots" content="All">
-    <meta name="author" content="Udgiver">
-    <meta name="copyright" content="Information om copyright">
+    <link rel="icon" href="images/blad_logo.png">
 
-    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <!--META -->
+    <meta name="robots" content="All" />
+    <meta name="author" content="Udgiver" />
+    <meta name="copyright" content="Information om copyright" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oversigt over produkter" />
+    <meta name="keywords" content="blomster, frisk, farver" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Botanica - Blomster butik" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Oversigt over produkter" />
 
-    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse - bliver brugt til responsive websider -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+
 </head>
 
-<!-- i <body> har man alt indhold på siden som brugeren kan se -->
 <body>
+<?php include "includes/navigation.html"; ?>
+<div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Begravelse</h5></div>
 
-<!-- Her skal sidens indhold ligge -->
+<div class="post-wrapper">
+    <div class="post">
+        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
+        <div class="post-info">
+            <h4> <a href="#"> Burdebuketter til alle</a></h4>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+        </div>
+    </div>
 
+    <div class="post">
+        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
+        <div class="post-info">
+            <h4> <a href="#"> Burdebuketter til alle</a></h4>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+        </div>
+    </div>
+
+    <div class="post">
+        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
+        <div class="post-info">
+            <h4> <a href="#"> Burdebuketter til alle</a></h4>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+        </div>
+    </div>
+
+    <div class="post">
+        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
+        <div class="post-info">
+            <h4> <a href="#"> Burdebuketter til alle</a></h4>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+        </div>
+    </div>
+
+    <!-- Main content -->
+
+    <div class="main-content">
+        <h1 class="recent-post-title"> Recent posts</h1>
+
+        <div class="post clearfix">
+            <img src="images/Brudebuket2.jpg" alt="" class="post-image">
+            <div class="post-preview"
+            <h2> <a href="#"> Hi hi</a></h2>
+            <i class="far fa-user">halløj</i>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+            <p class="preview-text">
+                bla bla bla
+            </p>
+        </div>
+    </div>
+
+    <div class="post clearfix">
+        <img src="images/Brudebuket2.jpg" alt="" class="post-image">
+        <div class="post-preview">
+            <h2> <a href="#"> Hi hi</a></h2>
+            <i class="far fa-user">halløj</i>
+            &nbsp;
+            <i class="far fa-user">halløj</i>
+            <p class="preview-text">
+                bla bla bla
+            </p>
+        </div>
+    </div>
+
+    <!-- Catagories -->
+    <div class="sidebar">
+        <div class="section topics">
+            <h2 class="section title">Oversigt</h2>
+            <ul>
+                <li> <a href="#"> Brudebuket</a> </li>
+                <li> <a href="#"> Begravelse</a> </li>
+                <li> <a href="#"> Anledning</a> </li>
+                <li> <a href="#"> Tilbehør</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<?php include "includes/footer.html"; ?>
 </body>
+
 </html>
+
