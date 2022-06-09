@@ -1,10 +1,10 @@
 <?php
 require "settings/init.php";
 
-$Kondu = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 14");
+$Kondu = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 14");
 $Val = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 13");
 $Stud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 12");
-$Føds = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
+$Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
 ?>
 
 <!DOCTYPE html>
@@ -216,7 +216,7 @@ $Føds = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
     <?php
-    foreach ($Føds as $produkt){
+    foreach ($Fods as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
   <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
   <div class='card-body'>

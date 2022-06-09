@@ -2,7 +2,7 @@
 require "settings/init.php";
 
 $Kiste = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 7");
-$Båredeko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 6");
+$Baaredeko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 6");
 $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
 ?>
 
@@ -236,7 +236,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
     <?php
-    foreach ($Båredeko as $produkt){
+    foreach ($Baaredeko as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
   <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
   <div class='card-body'>
