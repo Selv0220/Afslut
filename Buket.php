@@ -1,78 +1,173 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "webshop");
-$tab_query = "SELECT * FROM kategori ORDER BY cateId ASC";
-$tab_result = mysqli_query($connect, $tab_query);
-$tab_menu = '';
-$tab_content = '';
-$i = 0;
-while($row = mysqli_fetch_array($tab_result))
-{
-    if($i == 0)
-    {
-        $tab_menu .= '
-   <li class="active"><a href="#'.$row["cateId"].'" data-toggle="tab">'.$row["cateNavn"].'</a></li>
-  ';
-        $tab_content .= '
-   <div id="'.$row["prodCatagoryId"].'" class="tab-pane fade in active">
-  ';
-    }
-    else
-    {
-        $tab_menu .= '
-   <li><a href="#'.$row["cateId"].'" data-toggle="tab">'.$row["cateNavn"].'</a></li>
-  ';
-        $tab_content .= '
-   <div id="'.$row["prodCatagoryId"].'" class="tab-pane fade">
-  ';
-    }
-    $product_query = "SELECT * FROM produkter WHERE prodCatagoryId=1 ORDER BY prodNavn ASC";
-    $product_result = mysqli_query($connect, $product_query);
-    while($sub_row = mysqli_fetch_array($product_result))
-    {
-        $tab_content .= '
-  <div class="col-md-3" style="margin-bottom:25px;">
-   <img src="uploads/'.$sub_row["prodBillede"].'" class="img-responsive img-thumbnail" width="" alt=""/>
-   <h4>'.$sub_row["prodNavn"]. "<br>" . $sub_row["prodPris"].'</h4>
-  </div>
-  ';
-    }
-    $tab_content .= '<div style="clear:both"></div></div>';
-    $i++;
-}
+require "settings/init.php";
+
+$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 ?>
 
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
-    <title>Botanica</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+
+    <title>Botanica - Blomster butik</title>
+
+    <link rel="icon" href="images/blad_logo.png">
+
+    <!--META -->
+    <meta name="robots" content="All" />
+    <meta name="author" content="Udgiver" />
+    <meta name="copyright" content="Information om copyright" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oversigt over produkter" />
+    <meta name="keywords" content="blomster, frisk, farver" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Botanica - Blomster butik" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Oversigt over produkter" />
+
+    <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+
 </head>
 
-<!-- <style>
-    .thumbnail img {
-        width:  100px;
-        height: 100px;
+<style>
+
+    /* Container needed to position the button. Adjust the width as needed */
+    .container {
+        position: relative;
+        width: 300px;
+        display: flex;
+        align-items: center;
     }
-</style> -->
+
+    /* Make the image responsive */
+    .container img {
+        width: 48%;
+        height: auto;
+        margin-right:20px;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .container .btn {
+        position: absolute;
+        top: 92%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .container .btn:hover {
+        background-color: black;
+    }
+
+    .container .btn1 {
+        position: absolute;
+        top: 92%;
+        left: 63%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .container .btn1:hover {
+        background-color: black;
+    }
+
+    .row{
+        justify-content: center;
+    }
+
+    .navbar{
+        background-color: #F7F4F1;
+        font-family: "Playfair Display";
+        color: black;
+
+    }
+
+    .footer{
+        background-color: #50694A;
+        font-family: "Playfair Display";
+        color: white;
+    }
+</style>
 
 <body>
+<?php include "includes/navigation.html"; ?>
+<div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Buketter</h5></div>
 
 <div class="container">
-    <h2 align="center">Buket</a></h2>
-    <br />
-    <ul class="nav nav-tabs">
-        <?php
-        echo $tab_menu;
-        ?>
-    </ul>
-    <div class="tab-content">
-        <br />
-        <?php
-        echo $tab_content;
-        ?>
-    </div>
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
+
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
 </div>
+<br>
+
+<div class="container">
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn1">klik her</button>
+</div>
+<br>
+
+<div class="container">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
+
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+<br>
+
+<div class="container">
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn1">klik her</button>
+</div>
+<br>
+
+<div class="row text-center">
+    <?php
+    foreach ($produkter as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' src='/uploads'" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodName . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-primary'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
+
+<br>
+
+<?php include "includes/footer.html"; ?>
 </body>
+
 </html>

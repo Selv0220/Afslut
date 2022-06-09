@@ -33,20 +33,17 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 
 <style>
 
-    body{
-        margin: 0;
-    }
     /* Container needed to position the button. Adjust the width as needed */
     .container {
         position: relative;
-        width: 300px%;
+        width: 300px;
         display: flex;
         align-items: center;
     }
 
     /* Make the image responsive */
     .container img {
-        width: 40%;
+        width: 48%;
         height: auto;
         margin-right:20px;
     }
@@ -54,8 +51,8 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     /* Style the button and place it in the middle of the container/image */
     .container .btn {
         position: absolute;
-        top: 90%;
-        left: 33%;
+        top: 92%;
+        left: 35%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -71,26 +68,10 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         background-color: black;
     }
 
-    /* Reverse container */
-    .container1 {
-        position: relative;
-        width: 300px%;
-        display: flex;
-        align-items: center;
-    }
-
-    /* Make the image responsive */
-    .container1 img {
-        width: 40%;
-        height: auto;
-        margin-right:20px;
-    }
-
-    /* Style the button and place it in the middle of the container/image */
-    .container1 .btn {
+    .container .btn1 {
         position: absolute;
-        top: 90%;
-        left: 33%;
+        top: 92%;
+        left: 63%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -102,11 +83,26 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         border-radius: 5px;
     }
 
-    .container1 .btn:hover {
+    .container .btn1:hover {
         background-color: black;
     }
 
+    .row{
+        justify-content: center;
+    }
 
+    .navbar{
+        background-color: #F7F4F1;
+        font-family: "Playfair Display";
+        color: black;
+
+    }
+
+    .footer{
+        background-color: #50694A;
+        font-family: "Playfair Display";
+        color: white;
+    }
 </style>
 
 <body>
@@ -123,14 +119,15 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 </div>
 <br>
 
-<div class="container1">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn">klik her</button>
-
+<div class="container">
     <p>
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn1">klik her</button>
 </div>
+<br>
 
 <div class="container">
     <img src="images/DF_bryl.jpg" alt="Wedding">
@@ -140,22 +137,23 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
+<br>
 
-
-<div class="container1">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn">klik her</button>
-
+<div class="container">
     <p>
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-</div>
 
-<div class="row">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn1">klik her</button>
+</div>
+<br>
+
+<div class="row text-center">
     <?php
     foreach ($produkter as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
-  <img class='card-img-top' src='" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
+  <img class='card-img-top' src='/uploads'" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodName . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
@@ -166,6 +164,8 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         }
     ?>
 </div>
+
+<br>
 
 <?php include "includes/footer.html"; ?>
 </body>
