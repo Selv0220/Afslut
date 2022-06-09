@@ -1,7 +1,9 @@
 <?php
 require "settings/init.php";
 
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
+$Kiste = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 7");
+$Båredeko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 6");
+$Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +30,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 
     <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/css/fail.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -52,7 +55,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn {
         position: absolute;
         top: 92%;
-        left: 35%;
+        left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -71,7 +74,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn1 {
         position: absolute;
         top: 92%;
-        left: 63%;
+        left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -87,9 +90,6 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         background-color: black;
     }
 
-    .row{
-        justify-content: center;
-    }
 
     .navbar{
         background-color: #F7F4F1;
@@ -103,6 +103,41 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         font-family: "Playfair Display";
         color: white;
     }
+
+    .big{
+        height: 10vh;
+    }
+
+    #smartnav{
+        background-color: #F7F4F1;
+    }
+
+    .nav-link{
+        color: black;
+        font-weight: bolder;
+    }
+
+    nav.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color: #F7F4F1;
+    }
+
+    hr{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 80px;
+        margin-bottom:90px;
+        color:#EA9071;
+    }
+
+    h2{
+        font-family: "Playfair Display";
+        text-align: center;
+    }
+
 </style>
 
 <body>
@@ -110,7 +145,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Begravelse</h5></div>
 
 <div class="container">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/RL_grav.jpg" alt="Funeral">
     <button class="btn">klik her</button>
 
     <p>
@@ -124,13 +159,13 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/RL_grav.jpg" alt="Funeral">
     <button class="btn1">klik her</button>
 </div>
 <br>
 
 <div class="container">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/RL_grav.jpg" alt="Funeral">
     <button class="btn">klik her</button>
 
     <p>
@@ -144,20 +179,67 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/RL_grav.jpg" alt="Funeral">
     <button class="btn1">klik her</button>
 </div>
 <br>
 
-<div class="row text-center">
+<br>
+<h2>Kistepynt</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
     <?php
-    foreach ($produkter as $produkt){
+    foreach ($Kiste as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
-  <img class='card-img-top' src='/uploads'" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
   <div class='card-body'>
-    <h5 class='card-title'>" . $produkt -> prodName . "</h5>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-primary'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
+
+<br>
+<h2>Båredekorationer</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
+    <?php
+    foreach ($Båredeko as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
+
+<br>
+<h2>Kranse</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
+    <?php
+    foreach ($Krans as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
   </div>
   </div>
 </div>";
@@ -168,6 +250,20 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 <br>
 
 <?php include "includes/footer.html"; ?>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    var smartnav = document.getElementById("smartnav");
+    window.onscroll = function (){
+        if(window.pageYOffset > smartnav.offsetTop){
+            smartnav.classList.add("sticky");
+        }
+        else{
+            smartnav.classList.remove("sticky");
+        }
+    }
+</script>
+
 </body>
 
 </html>
