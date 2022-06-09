@@ -22,7 +22,7 @@ h4{
 
 .nav-link{
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
  nav.sticky{
@@ -32,8 +32,6 @@ h4{
    display: flex;
    background-color: $Beihead;
 }
-
-
 
 html {
   scroll-behavior: smooth;
@@ -56,9 +54,6 @@ html {
   background-position: center center;
 }
 
-.hero{
-  background: $Green;
-}
 
 .col-sm{
   padding: 2.5rem;
@@ -87,9 +82,16 @@ html {
   color: #ffffff;
 }
 
+.pil{
+  background: white;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
 .kat:hover{
   background: #EA9071;
   color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 .button__text{
@@ -108,29 +110,75 @@ html {
 }
 
 #header {
-  trasition: 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 .flyv{
-  trasition: 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 .bagved{
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   height: 100vh;
+  width: 100%;
 }
 
 .bodybg1{
-  background: $Blue;
+  background: $Org;
 }
 .bodybg2{
   background: $Org;
 }
 .bodybg3{
-  background: $Beibg;
+  background: $Org;
 }
 
+.hero{
+  display: none;
+}
+
+#smartnav{
+  background-color: transparent;
+}
+
+.big{
+  height: 100vh;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+
+  h1{
+    display: none;
+  }
+
+  .hero{
+    display: block;
+  }
+
+  .tiny{
+    display: none;
+  }
+
+  #smartnav{
+    background-color: $Beihead;
+  }
+
+  .bodybg1{
+    background: $Blue;
+  }
+  .bodybg2{
+    background: $Green;
+  }
+  .bodybg3{
+    background: $Beibg;
+  }
+
+  .big{
+    height: 10vh;
+  }
+}
 
 
 
