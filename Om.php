@@ -27,6 +27,10 @@
 
 <style>
 
+    body{
+        background-color: #EFE8DE;
+    }
+
     /* Container needed to position the button. Adjust the width as needed */
     .container {
         position: relative;
@@ -49,7 +53,7 @@
         left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -59,7 +63,8 @@
     }
 
     .container .btn:hover {
-        background-color: black;
+        background-color: #EA9071;
+        color: white;
     }
 
     .container .btn1 {
@@ -68,7 +73,7 @@
         left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -78,7 +83,7 @@
     }
 
     .container .btn1:hover {
-        background-color: black;
+        background-color: #EA9071;
     }
 
     .navbar{
@@ -117,46 +122,47 @@
 
 </style>
 
-<body>
+<body style="background: #EFE8DE">
 <?php include "includes/navigation.html"; ?>
+
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Om os</h5></div>
 
 <div class="container">
-    <img src="images/IC_buket.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="about">
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Botanica blomster <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Kontakt information <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/IC_buket.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="about">
     <button class="btn1">klik her</button>
 </div>
 <br>
 
 <div class="container">
-    <img src="images/IC_buket.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="about">
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Andet <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Andet <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/IC_buket.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="about">
     <button class="btn1">klik her</button>
 </div>
 <br>
