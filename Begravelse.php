@@ -58,7 +58,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
         left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -68,7 +68,8 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     }
 
     .container .btn:hover {
-        background-color: black;
+        background-color: #EA9071;
+        color: white;
     }
 
     .container .btn1 {
@@ -77,7 +78,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
         left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -87,7 +88,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     }
 
     .container .btn1:hover {
-        background-color: black;
+        background-color: #EA9071;
     }
 
 
@@ -125,22 +126,45 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
         background-color: #F7F4F1;
     }
 
-    hr{
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 80px;
-        margin-bottom:90px;
-        color:#EA9071;
-    }
-
     h2{
         font-family: "Playfair Display";
         text-align: center;
     }
 
+    .card-img-top {
+        width: 100%;
+        height: 25vw;
+        object-fit: cover;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+
+    .btn2 {
+        position: center;
+        top: 92%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #50694A;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn2:hover {
+        background-color: #EA9071;
+        color: white;
+    }
+
 </style>
 
-<body>
+<body style="background: #EFE8DE">
 <?php include "includes/navigation.html"; ?>
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Begravelse</h5></div>
 
@@ -149,14 +173,14 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Kistepynt <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Bårebuket <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
     <img src="images/RL_grav.jpg" alt="Funeral">
@@ -169,14 +193,14 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Båredekoration <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Krans <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
     <img src="images/RL_grav.jpg" alt="Funeral">
@@ -197,7 +221,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
   </div>
   </div>
 </div>";
@@ -218,7 +242,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
   </div>
   </div>
 </div>";
@@ -227,8 +251,8 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
 </div>
 
 <br>
-<h2>Kranse</h2>
-<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<h2>Krans</h2>
+<div class="col-12 justify-content-center"> </div>
 <br>
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
@@ -239,7 +263,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
   </div>
   </div>
 </div>";

@@ -57,7 +57,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
         left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -67,7 +67,8 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     }
 
     .container .btn:hover {
-        background-color: black;
+        background-color: #EA9071;
+        color: white;
     }
 
     .container .btn1 {
@@ -76,7 +77,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
         left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -86,7 +87,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     }
 
     .container .btn1:hover {
-        background-color: black;
+        background-color: #EA9071;
     }
 
 
@@ -124,22 +125,45 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
         background-color: #F7F4F1;
     }
 
-    hr{
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 80px;
-        margin-bottom:90px;
-        color:#EA9071;
-    }
-
     h2{
         font-family: "Playfair Display";
         text-align: center;
     }
 
+    .card-img-top {
+        width: 100%;
+        height: 25vw;
+        object-fit: cover;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+
+    .btn2 {
+        position: center;
+        top: 92%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #50694A;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn2:hover {
+        background-color: #EA9071;
+        color: white;
+    }
+
 </style>
 
-<body>
+<body style="background: #EFE8DE">
 <?php include "includes/navigation.html"; ?>
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Tilbehør</h5></div>
 
@@ -148,14 +172,14 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Vin <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Bamser <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
     <img src="images/EK_choco.jpg" alt="Til">
@@ -168,14 +192,14 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     <button class="btn">klik her</button>
 
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Chokolade <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Diverse <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
     <img src="images/EK_choco.jpg" alt="Til">
@@ -196,7 +220,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
   </div>
   </div>
 </div>";
@@ -217,7 +241,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
   </div>
   </div>
 </div>";

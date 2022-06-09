@@ -49,7 +49,7 @@
         left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -59,7 +59,8 @@
     }
 
     .container .btn:hover {
-        background-color: black;
+        background-color: #EA9071;
+        color: white;
     }
 
     .container .btn1 {
@@ -68,7 +69,7 @@
         left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-        background-color: #555;
+        background-color: #50694A;
         color: white;
         font-size: 16px;
         padding: 12px 24px;
@@ -78,7 +79,7 @@
     }
 
     .container .btn1:hover {
-        background-color: black;
+        background-color: #EA9071;
     }
 
     .navbar{
@@ -117,7 +118,7 @@
 
 </style>
 
-<body>
+<body style="background: #EFE8DE">
 <?php include "includes/navigation.html"; ?>
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Buketter</h5></div>
 
