@@ -3,7 +3,7 @@ require "settings/init.php";
 
 $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 $knap = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
-$hår = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 3");
+$haar = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 3");
 $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
 ?>
 
@@ -258,7 +258,7 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
     <?php
-    foreach ($hår as $produkt){
+    foreach ($haar as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
   <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
   <div class='card-body'>
