@@ -85,37 +85,47 @@
 
     <div class="row">
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
+            <a href="Buket.php" style="text-decoration: none; color: black" >
             <button class="card-body kat bodybg1 border-0">
-                <h3 class="card-title text-center"><a href="Buket.php" style="text-decoration: none; color: black" >Buketter </a></h3>
+                <h3 class="card-title text-center">Buketter</h3>
                 <img src="images/IC_buket.jpg" class="card-img-top" alt="Blomster buket">
             </button>
+            </a>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto mt-5 my-lg-0">
+            <a href="Bryllup.php" style="text-decoration: none; color: black" >
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center"><a href="Bryllup.php" style="text-decoration: none; color: black" >Bryllup </a></h3>
+                <h3 class="card-title text-center">Bryllup</h3>
                 <img src="images/DF_bryl.jpg" class="card-img-top" alt="Brude par">
             </button>
+            </a>
         </div>
     </div>
 
     <div class="row my-5 py-5">
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
+            <a href="Begravelse.php" style="text-decoration: none; color: black" >
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center"><a href="Begravelse.php" style="text-decoration: none; color: black" >Begravelse </a></h3>
+                <h3 class="card-title text-center">Begravelse</h3>
                 <img src="images/RL_grav.jpg" class="card-img-top" alt="Begravelse">
             </button>
+            </a>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
+            <a href="Anledninger.php" style="text-decoration: none; color: black" >
             <button class="card-body kat bodybg1 border-0">
-                <h3 class="card-title text-center"><a href="Anledninger.php" style="text-decoration: none; color: black" >Anledning </a></h3>
+                <h3 class="card-title text-center">Anledning</h3>
                 <img src="images/AS_valen.jpg" class="card-img-top" alt="Blomster hjerte">
             </button>
+            </a>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
+            <a href="Tilbehør.php" style="text-decoration: none; color: black" >
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center"><a href="Tilbehør.php" style="text-decoration: none; color: black" >Tilbehør </a></h3>
+                <h3 class="card-title text-center">Tilbehør</h3>
                 <img src="images/EK_choco.jpg" class="card-img-top" alt="Chokolader">
             </button>
+            </a>
         </div>
     </div>
 </div>
