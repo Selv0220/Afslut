@@ -38,6 +38,7 @@
     <script src="https://cdn.tiny.cloud/1/0a3ztzprally0eprqc4f0p37jzfzfl9xv6koxshqie43g1k6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
+
 <body>
 
 <!-- Lille slutter -->
@@ -85,13 +86,13 @@
     <div class="row">
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg1 border-0">
-                <h3 class="card-title text-center">Buketter</h3>
+                <h3 class="card-title text-center"><a href="Buket.php" style="text-decoration: none; color: black" >Buketter </a></h3>
                 <img src="images/IC_buket.jpg" class="card-img-top" alt="Blomster buket">
             </button>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto mt-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center">Bryllup</h3>
+                <h3 class="card-title text-center"><a href="Bryllup.php" style="text-decoration: none; color: black" >Bryllup </a></h3>
                 <img src="images/DF_bryl.jpg" class="card-img-top" alt="Brude par">
             </button>
         </div>
@@ -100,19 +101,19 @@
     <div class="row my-5 py-5">
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center">Begravelse</h3>
+                <h3 class="card-title text-center"><a href="Begravelse.php" style="text-decoration: none; color: black" >Begravelse </a></h3>
                 <img src="images/RL_grav.jpg" class="card-img-top" alt="Begravelse">
             </button>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg1 border-0">
-                <h3 class="card-title text-center">Anledning</h3>
+                <h3 class="card-title text-center"><a href="Anledninger.php" style="text-decoration: none; color: black" >Anledning </a></h3>
                 <img src="images/AS_valen.jpg" class="card-img-top" alt="Blomster hjerte">
             </button>
         </div>
         <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
-                <h3 class="card-title text-center">Tilbehør</h3>
+                <h3 class="card-title text-center"><a href="Tilbehør.php" style="text-decoration: none; color: black" >Tilbehør </a></h3>
                 <img src="images/EK_choco.jpg" class="card-img-top" alt="Chokolader">
             </button>
         </div>
