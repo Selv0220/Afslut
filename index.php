@@ -32,122 +32,16 @@
 
 </head>
 <body>
-<!-- Lille starter -->
-<div class="tiny">
-    <div class="m-0 p-0 d-flex flex-row-reverse">
-        <img src="images/dum_plante.png" class="bagved m-0 p-0" style="position: fixed">
-    </div>
-    <div class="container mt-5 pt-5 bg-transparent" id="logos">
-        <br class="my-5"><br class="my-5">
-        <br class="my-5"><br class="my-5">
-        <br class="my-5"><br class="my-5">
-        <div class="row">
-            <div class="col-6 mx-5">
-                <img src="images/BLogo.png" class="img-fluid ">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-
-    <div class="container-fluid bg-transparent" id="knaps">
-        <div class="row">
-            <div class="col-2 text-center my-auto mx-auto p-md-4">
-                <a href="#Ned">
-                    <button class="mx-auto text-center bg-transparent border-0">
-                        <img src="images/downer.png" class="img-thumbnail mx-auto text-center bg-transparent border-0">
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-    <br class="my-5"><br class="my-5">
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg1 px-0 pb-5">
-                <h3 class="card-title text-center">Buketter</h3>
-                <img src="images/IC_buket.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg2 px-0 pb-5">
-                <h3 class="card-title text-center">Bryllup</h3>
-                <img src="images/DF_bryl.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg3 px-0 pb-5">
-                <h3 class="card-title text-center">Begravelse</h3>
-                <img src="images/RL_grav.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg1 px-0 pb-5">
-                <h3 class="card-title text-center">Anledning</h3>
-                <img src="images/AS_valen.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5" id="Ned">
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg2 px-0 pb-5">
-                <h3 class="card-title text-center">Tilbehør</h3>
-                <img src="images/EK_choco.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-
-    <div class="container-sm my-5 mx-5">
-        <div class="card col-5">
-            <div class="card-body bodybg3 px-0 pb-5">
-                <h3 class="card-title text-center">Om os</h3>
-                <img src="images/Varer.jpg" class="card-img-top p-2" style="background: white">
-            </div>
-        </div>
-    </div>
-
-    <!-- mellemrum -->
-    <br class="my-5"><br class="my-5">
-</div>
-
 
 <!-- Lille slutter -->
+
+
+
 
 <!-- Stor starter -->
 
 <div class="container-fluid hero" style="font-family: 'Playfair Display'" id="bg">
-    <div class="row">
+    <div class="row bodybg2">
         <div class="col-lg-6 text-center my-auto">
             <div class="navbar-brand border-0 col-lg-7 mx-auto" style="background-color: #F7F4F1; border-radius: 35px">
                 <img src="images/BLogo.png" class="logo col-10">
@@ -167,19 +61,28 @@
 </div>
 
 
-<?php include "includes/navigation.html"; ?>
 
-<div class="container-fluid py-5 col-8 col-lg-12" style="font-family: 'Playfair Display'">
-    <h3 class="section-header my-5" style="font-family: 'Playfair Display'; color: black">Produktkategorier</h3>
+<div class="m-0 p-0 d-flex flex-row-reverse">
+    <img src="images/dum_plante.png" class="bagved m-0 p-0" style="position: fixed">
+</div>
+
+<div class="big">
+    <?php include "includes/navigation.html"; ?>
+    <button class="navbar-brand border-0 col-12 bg-transparent tiny position-absolute bottom-0">
+        <a href="#mini"><img src="images/downer_alt.png" class="pil kat col-2"></a>
+    </button>
+</div>
+<div class="container-fluid py-5 col-8 col-lg-12" style="font-family: 'Playfair Display'" id="mini">
+    <h3 class="section-header my-5 hero" style="font-family: 'Playfair Display'; color: black">Produktkategorier</h3>
 
     <div class="row">
-        <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg1 border-0">
                 <h3 class="card-title text-center">Buketter</h3>
                 <img src="images/IC_buket.jpg" class="card-img-top">
             </button>
         </div>
-        <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card col-10 col-lg-3 p-0 mx-auto mt-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
                 <h3 class="card-title text-center">Bryllup</h3>
                 <img src="images/DF_bryl.jpg" class="card-img-top">
@@ -188,19 +91,19 @@
     </div>
 
     <div class="row my-5 py-5">
-        <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
                 <h3 class="card-title text-center">Begravelse</h3>
                 <img src="images/RL_grav.jpg" class="card-img-top">
             </button>
         </div>
-        <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg1 border-0">
                 <h3 class="card-title text-center">Anledning</h3>
                 <img src="images/AS_valen.jpg" class="card-img-top">
             </button>
         </div>
-        <div class="card col-lg-3 p-0 mx-auto">
+        <div class="card col-10 col-lg-3 p-0 mx-auto my-5 my-lg-0">
             <button class="card-body kat bodybg3 border-0">
                 <h3 class="card-title text-center">Tilbehør</h3>
                 <img src="images/EK_choco.jpg" class="card-img-top">
@@ -209,7 +112,7 @@
     </div>
 </div>
 
-<div class="valgF py-5">
+<div class="valgF py-5 hero">
     <h3 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Lad dig blive inspireret</h3>
     <div id="carouselExampleDark" class="carousel slide carousel-dark carousel-fade col-lg-4 mx-auto" data-bs-ride="carousel">
         <div class="carousel-indicators">

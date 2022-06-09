@@ -68,6 +68,9 @@
 
 <div class="big">
 <?php include "includes/navigation.html"; ?>
+    <button class="navbar-brand border-0 col-12 bg-transparent tiny position-absolute bottom-0">
+        <a href="#mini"><img src="images/downer_alt.png" class="pil kat col-2"></a>
+    </button>
 </div>
 <div class="container-fluid py-5 col-8 col-lg-12" style="font-family: 'Playfair Display'" id="mini">
     <h3 class="section-header my-5 hero" style="font-family: 'Playfair Display'; color: black">Produktkategorier</h3>
