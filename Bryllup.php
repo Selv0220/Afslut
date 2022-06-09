@@ -2,6 +2,9 @@
 require "settings/init.php";
 
 $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
+$knap = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
+$hår = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 3");
+$brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +31,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 
     <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="/css/fail.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -52,7 +56,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn {
         position: absolute;
         top: 92%;
-        left: 35%;
+        left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -71,7 +75,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn1 {
         position: absolute;
         top: 92%;
-        left: 63%;
+        left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -87,9 +91,6 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         background-color: black;
     }
 
-    .row{
-        justify-content: center;
-    }
 
     .navbar{
         background-color: #F7F4F1;
@@ -103,6 +104,41 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         font-family: "Playfair Display";
         color: white;
     }
+
+    .big{
+        height: 10vh;
+    }
+
+    #smartnav{
+        background-color: #F7F4F1;
+    }
+
+    .nav-link{
+        color: black;
+        font-weight: bolder;
+    }
+
+    nav.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color: #F7F4F1;
+    }
+
+    hr{
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 80px;
+        margin-bottom:90px;
+        color:#EA9071;
+    }
+
+    h2{
+        font-family: "Playfair Display";
+        text-align: center;
+    }
+
 </style>
 
 <body>
@@ -149,15 +185,20 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 </div>
 <br>
 
-<div class="row text-center">
+<br>
+<h2>Brudebuketter</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
     <?php
     foreach ($produkter as $produkt){
         echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
-  <img class='card-img-top' src='/uploads'" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
   <div class='card-body'>
-    <h5 class='card-title'>" . $produkt -> prodName . "</h5>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-primary'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
   </div>
   </div>
 </div>";
@@ -166,8 +207,83 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 </div>
 
 <br>
+<h2>Knaphulsbuketter</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
+    <?php
+    foreach ($knap as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
+
+<br>
+<h2>Hårkrans</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
+    <?php
+    foreach ($hår as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
+
+<br>
+<h2>Brudepige</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br>
+
+<div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
+    <?php
+    foreach ($brud as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' <img alt='test' src='images/" . $produkt -> prodBillede . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-outline-success'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+    }
+    ?>
+</div>
 
 <?php include "includes/footer.html"; ?>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    var smartnav = document.getElementById("smartnav");
+    window.onscroll = function (){
+        if(window.pageYOffset > smartnav.offsetTop){
+            smartnav.classList.add("sticky");
+        }
+        else{
+            smartnav.classList.remove("sticky");
+        }
+    }
+</script>
+
 </body>
 
 </html>

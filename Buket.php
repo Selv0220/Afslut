@@ -1,9 +1,3 @@
-<?php
-require "settings/init.php";
-
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
-?>
-
 <!DOCTYPE html>
 <html lang="da">
 
@@ -52,7 +46,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn {
         position: absolute;
         top: 92%;
-        left: 35%;
+        left: 42%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -71,7 +65,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
     .container .btn1 {
         position: absolute;
         top: 92%;
-        left: 63%;
+        left: 56%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #555;
@@ -87,10 +81,6 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         background-color: black;
     }
 
-    .row{
-        justify-content: center;
-    }
-
     .navbar{
         background-color: #F7F4F1;
         font-family: "Playfair Display";
@@ -103,6 +93,28 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         font-family: "Playfair Display";
         color: white;
     }
+
+    .big{
+        height: 10vh;
+    }
+
+    #smartnav{
+        background-color: #F7F4F1;
+    }
+
+    .nav-link{
+        color: black;
+        font-weight: bolder;
+    }
+
+    nav.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color: #F7F4F1;
+    }
+
 </style>
 
 <body>
@@ -110,7 +122,7 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Buketter</h5></div>
 
 <div class="container">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="Buket">
     <button class="btn">klik her</button>
 
     <p>
@@ -124,13 +136,13 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="Buket">
     <button class="btn1">klik her</button>
 </div>
 <br>
 
 <div class="container">
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="Buket">
     <button class="btn">klik her</button>
 
     <p>
@@ -144,30 +156,26 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <img src="images/IC_buket.jpg" alt="Buket">
     <button class="btn1">klik her</button>
 </div>
-<br>
-
-<div class="row text-center">
-    <?php
-    foreach ($produkter as $produkt){
-        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
-  <img class='card-img-top' src='/uploads'" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
-  <div class='card-body'>
-    <h5 class='card-title'>" . $produkt -> prodName . "</h5>
-    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-primary'>Se detaljer</a>
-  </div>
-  </div>
-</div>";
-    }
-    ?>
-</div>
-
 <br>
 
 <?php include "includes/footer.html"; ?>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    var smartnav = document.getElementById("smartnav");
+    window.onscroll = function (){
+        if(window.pageYOffset > smartnav.offsetTop){
+            smartnav.classList.add("sticky");
+        }
+        else{
+            smartnav.classList.remove("sticky");
+        }
+    }
+</script>
+
 </body>
 
 </html>
