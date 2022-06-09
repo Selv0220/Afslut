@@ -31,31 +31,140 @@ $produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 1");
 
 </head>
 
+<style>
+
+    body{
+        margin: 0;
+    }
+    /* Container needed to position the button. Adjust the width as needed */
+    .container {
+        position: relative;
+        width: 300px%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Make the image responsive */
+    .container img {
+        width: 40%;
+        height: auto;
+        margin-right:20px;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .container .btn {
+        position: absolute;
+        top: 90%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .container .btn:hover {
+        background-color: black;
+    }
+
+    /* Reverse container */
+    .container1 {
+        position: relative;
+        width: 300px%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Make the image responsive */
+    .container1 img {
+        width: 40%;
+        height: auto;
+        margin-right:20px;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .container1 .btn {
+        position: absolute;
+        top: 90%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .container1 .btn:hover {
+        background-color: black;
+    }
+
+
+</style>
+
 <body>
 <?php include "includes/navigation.html"; ?>
 <div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Bryllup</h5></div>
 
-<div class="card" style="width: 18rem; font-family: 'Playfair Display'";>
-    <div class="card-img-top" src="..." alt="Card image cap">
-        <?php
-        foreach ($produkter as $produkt){
-            echo "</h5><br> <img alt='test' style='max-width: 25%;' src='images/" . $produkt->prodBillede . "'/>";}
-        ?>
+<div class="container">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
 
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <?php
-            foreach ($produkter as $produkt){
-                echo "<h5> <br>" . $produkt->prodNavn . "</h5>";}
-            ?>
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+<br>
 
-            <p class="card-text"></p>
-            <?php
-            foreach ($produkter as $produkt){
-                echo "<br><h6> <br>" . $produkt->prodBeskrivelse . "<br>" . $produkt->prodPris . "</h6>";}
-            ?>
-        </div>
-    </div>
+<div class="container1">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
+
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+<div class="container">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
+
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+
+<div class="container1">
+    <img src="images/DF_bryl.jpg" alt="Wedding">
+    <button class="btn">klik her</button>
+
+    <p>
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+<div class="row">
+    <?php
+    foreach ($produkter as $produkt){
+        echo "<div class='col-12 col-lg-4'><div class='card' style='width: 18rem;'>
+  <img class='card-img-top' src='" . $produkt -> prodBillede ." alt='" . $produkt -> prodName . "'>
+  <div class='card-body'>
+    <h5 class='card-title'>" . $produkt -> prodName . "</h5>
+    <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn btn-primary'>Se detaljer</a>
+  </div>
+  </div>
+</div>";
+        }
+    ?>
 </div>
 
 <?php include "includes/footer.html"; ?>

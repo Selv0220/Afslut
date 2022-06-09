@@ -60,13 +60,15 @@ while($row = mysqli_fetch_array($tab_result))
 <body>
 
 <div class="container">
-    <h2 align="center">Begravelse</a></h2>
+    <h2 class="center">Begravelse</a></h2>
     <br />
-    <ul class="nav nav-tabs">
+    <ul class="tab-content">
         <?php
-        echo $tab_menu;
+        echo $tab_content;
         ?>
     </ul>
+
+
     <div class="tab-content">
         <br />
         <?php
