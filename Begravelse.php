@@ -1,124 +1,78 @@
 <?php
-require "settings/init.php";
-
-$produkter = $db->sql("SELECT * FROM produkter WHERE prodCatagoryId = 2");
+$connect = mysqli_connect("localhost", "root", "", "webshop");
+$tab_query = "SELECT * FROM kategori1 ORDER BY cateId1 ASC";
+$tab_result = mysqli_query($connect, $tab_query);
+$tab_menu = '';
+$tab_content = '';
+$i = 0;
+while($row = mysqli_fetch_array($tab_result))
+{
+    if($i == 0)
+    {
+        $tab_menu .= '
+   <li class="active"><a href="#'.$row["cateId1"].'" data-toggle="tab">'.$row["cateNavn1"].'</a></li>
+  ';
+        $tab_content .= '
+   <div id="'.$row["prodCatagoryId"].'" class="tab-pane fade in active">
+  ';
+    }
+    else
+    {
+        $tab_menu .= '
+   <li><a href="#'.$row["cateId1"].'" data-toggle="tab">'.$row["cateNavn1"].'</a></li>
+  ';
+        $tab_content .= '
+   <div id="'.$row["prodCatagoryId"].'" class="tab-pane fade">
+  ';
+    }
+    $product_query = "SELECT * FROM produkter WHERE prodCatagoryId=7 ORDER BY prodNavn ASC";
+    $product_result = mysqli_query($connect, $product_query);
+    while($sub_row = mysqli_fetch_array($product_result))
+    {
+        $tab_content .= '
+  <div class="col-md-3" style="margin-bottom:25px;">
+   <img src="images/'.$sub_row["prodBillede"].'" class="img-responsive img-thumbnail" width="" alt=""/>
+   <h4>'.$sub_row["prodNavn"]. "<br>" . $sub_row["prodPris"].'</h4>
+  </div>
+  ';
+    }
+    $tab_content .= '<div style="clear:both"></div></div>';
+    $i++;
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
-    <meta charset="utf-8" />
-
-    <title>Botanica - Blomster butik</title>
-
-    <link rel="icon" href="images/blad_logo.png">
-
-    <!--META -->
-    <meta name="robots" content="All" />
-    <meta name="author" content="Udgiver" />
-    <meta name="copyright" content="Information om copyright" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Oversigt over produkter" />
-    <meta name="keywords" content="blomster, frisk, farver" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Botanica - Blomster butik" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="Oversigt over produkter" />
-
-    <link href="/css/Bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-
+    <title>Botanica</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
+<!-- <style>
+    .thumbnail img {
+        width:  100px;
+        height: 100px;
+    }
+</style> -->
+
 <body>
-<?php include "includes/navigation.html"; ?>
-<div class="py-5 text-center" id="Hertil"><h5 class="section-header py-5" style="font-family: 'Playfair Display'; color: black">Begravelse</h5></div>
 
-<div class="post-wrapper">
-    <div class="post">
-        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
-        <div class="post-info">
-            <h4> <a href="#"> Burdebuketter til alle</a></h4>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-        </div>
-    </div>
-
-    <div class="post">
-        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
-        <div class="post-info">
-            <h4> <a href="#"> Burdebuketter til alle</a></h4>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-        </div>
-    </div>
-
-    <div class="post">
-        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
-        <div class="post-info">
-            <h4> <a href="#"> Burdebuketter til alle</a></h4>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-        </div>
-    </div>
-
-    <div class="post">
-        <img src="images/Brudebuket.jpg" alt="" class="slider-image">
-        <div class="post-info">
-            <h4> <a href="#"> Burdebuketter til alle</a></h4>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-        </div>
-    </div>
-
-    <!-- Main content -->
-
-    <div class="main-content">
-        <h1 class="recent-post-title"> Recent posts</h1>
-
-        <div class="post clearfix">
-            <img src="images/Brudebuket2.jpg" alt="" class="post-image">
-            <div class="post-preview"
-            <h2> <a href="#"> Hi hi</a></h2>
-            <i class="far fa-user">halløj</i>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-            <p class="preview-text">
-                bla bla bla
-            </p>
-        </div>
-    </div>
-
-    <div class="post clearfix">
-        <img src="images/Brudebuket2.jpg" alt="" class="post-image">
-        <div class="post-preview">
-            <h2> <a href="#"> Hi hi</a></h2>
-            <i class="far fa-user">halløj</i>
-            &nbsp;
-            <i class="far fa-user">halløj</i>
-            <p class="preview-text">
-                bla bla bla
-            </p>
-        </div>
-    </div>
-
-    <!-- Catagories -->
-    <div class="sidebar">
-        <div class="section topics">
-            <h2 class="section title">Oversigt</h2>
-            <ul>
-                <li> <a href="#"> Brudebuket</a> </li>
-                <li> <a href="#"> Begravelse</a> </li>
-                <li> <a href="#"> Anledning</a> </li>
-                <li> <a href="#"> Tilbehør</a> </li>
-            </ul>
-        </div>
+<div class="container">
+    <h2 align="center">Begravelse</a></h2>
+    <br />
+    <ul class="nav nav-tabs">
+        <?php
+        echo $tab_menu;
+        ?>
+    </ul>
+    <div class="tab-content">
+        <br />
+        <?php
+        echo $tab_content;
+        ?>
     </div>
 </div>
-
-<?php include "includes/footer.html"; ?>
 </body>
-
 </html>
-
