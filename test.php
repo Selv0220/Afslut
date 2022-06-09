@@ -44,7 +44,7 @@
         <br class="my-5"><br class="my-5">
         <div class="row">
             <div class="col-6 mx-5">
-                <img src="images/BLogo.png" class="img-fluid ">
+                <img src="images/BLogo.png" class="img-fluid">
             </div>
         </div>
     </div>
@@ -177,51 +177,44 @@
     <h3 class="section-header my-5" style="font-family: 'Playfair Display'; color: black">Produktkategorier</h3>
 
     <div class="row">
-    <div class="card col-lg-3 p-0 m-5">
-        <div class="card-body bodybg1">
+    <div class="card col-lg-3 p-0 mx-auto">
+        <button class="card-body bodybg1 border-0">
             <h3 class="card-title text-center">Buketter</h3>
             <img src="images/IC_buket.jpg" class="card-img-top">
-        </div>
+        </button>
     </div>
     <div class="card col-lg-3 p-0 mx-auto">
-        <div class="card-body bodybg3">
+        <button class="card-body bodybg2 border-0">
             <h3 class="card-title text-center">Bryllup</h3>
             <img src="images/DF_bryl.jpg" class="card-img-top">
-        </div>
+        </button>
     </div>
-    <div class="card col-lg-3 p-0 m-5">
-        <div class="card-body bodybg2">
+    </div>
+
+    <div class="row my-5 py-5">
+    <div class="card col-lg-3 p-0 mx-auto">
+        <button class="card-body bodybg2 border-0">
             <h3 class="card-title text-center">Begravelse</h3>
             <img src="images/RL_grav.jpg" class="card-img-top">
-        </div>
-    </div>
-    <div class="card col-lg-3 p-0 m-5">
-        <div class="card-body bodybg2">
-            <h3 class="card-title text-center">Anledning</h3>
-            <img src="images/AS_valen.jpg" class="card-img-top">
-        </div>
+        </button>
     </div>
     <div class="card col-lg-3 p-0 mx-auto">
-        <div class="card-body bodybg1">
+        <button class="card-body bodybg3 border-0">
+            <h3 class="card-title text-center">Anledning</h3>
+            <img src="images/AS_valen.jpg" class="card-img-top">
+        </button>
+    </div>
+    <div class="card col-lg-3 p-0 mx-auto">
+        <button class="card-body bodybg1 border-0">
             <h3 class="card-title text-center">Tilbehør</h3>
             <img src="images/EK_choco.jpg" class="card-img-top">
-        </div>
+        </button>
     </div>
 </div>
-</div>
-
-<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
-    <h5 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Besøg os fordi...</h5>
-    <div class="box-body pb-2">
-        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har mange blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har rigtig mange blomster</ul>
-        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Vi har ikke nogle blomster</ul>
-    </div>
 </div>
 
 <div class="valgF py-5">
-    <h5 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Se her!</h5>
+    <h5 class="section-header py-2" style="font-family: 'Playfair Display'; color: black">Lad dig blive inspireret</h5>
     <div id="carouselExampleDark" class="carousel slide carousel-dark carousel-fade col-lg-4 mx-auto" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -245,6 +238,17 @@
         </button>
     </div>
 </div>
+
+<div class="box text-center py-3" style="background-color:white; font-family: 'Playfair Display'; color: black">
+    <h2 class="section-header py-4" style="font-family: 'Playfair Display'; color: black">Hos os får du altid:</h2>
+    <div class="box-body pb-2">
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Mulighed for online bestilling</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Bredt udvalg af blomster og brugskunst</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Den bedste service</ul>
+        <ul><img src="images/blad_logo.png" width="22" alt="blad ikon"> Gode råd og fif til at holde dine blomster længere</ul>
+    </div>
+</div>
+
 </div>
 
 <!-- Stor slutter -->
