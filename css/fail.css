@@ -13,8 +13,8 @@ h1{
     height: 100vh;
     background: #E8E1D6;
     background-image:
-            url(https://astelun.com/Botanica/images/leafy_big.png),
-            url(https://astelun.com/Botanica/images/blad_logo2.png);
+            url(https://astelun.com/images/leafy_big.png),
+            url(https://astelun.com/images/blad_logo2.png);
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;
@@ -34,9 +34,9 @@ h1{
         height: 100vh;
         background: #E8E1D6;
         background-image:
-                url(https://astelun.com/Botanica/images/404.png),
-                url(https://astelun.com/Botanica/images/leafy_big.png),
-                url(https://astelun.com/Botanica/images/blad_logo2.png);
+                url(https://astelun.com/images/404.png),
+                url(https://astelun.com/images/leafy_big.png),
+                url(https://astelun.com/images/blad_logo2.png);
         background-repeat: no-repeat;
         background-position: center;
         background-position: 50% 50%;
