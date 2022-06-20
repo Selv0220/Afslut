@@ -170,7 +170,8 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
 
 <div class="container">
     <img src="images/RL_grav.jpg" alt="Funeral">
-    <button class="btn">klik her</button>
+    <a href="#KP">
+        <button class="btn">klik her</button></a>
 
     <p>
         Kistepynt <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -184,13 +185,15 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     </p>
 
     <img src="images/RL_grav.jpg" alt="Funeral">
-    <button class="btn1">klik her</button>
+    <a href="#BR">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
 <div class="container">
     <img src="images/RL_grav.jpg" alt="Funeral">
-    <button class="btn">klik her</button>
+    <a href="#BD">
+        <button class="btn">klik her</button></a>
 
     <p>
         Båredekoration <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -204,11 +207,14 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     </p>
 
     <img src="images/RL_grav.jpg" alt="Funeral">
-    <button class="btn1">klik her</button>
+    <a href="#KR">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
-<br>
+
+
+<br id="KP" class="my-5 py-5">
 <h2>Kistepynt</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -221,7 +227,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Tilføj til kurv</a>
   </div>
   </div>
 </div>";
@@ -229,8 +235,8 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     ?>
 </div>
 
-<br>
-<h2>Båredekorationer</h2>
+<br id="BD" class="my-5 py-5">
+<h2>Båredekoration</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
 
@@ -242,7 +248,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Tilføj til kurv</a>
   </div>
   </div>
 </div>";
@@ -250,9 +256,9 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
     ?>
 </div>
 
-<br>
+<br id="KR" class="my-5 py-5">
 <h2>Krans</h2>
-<div class="col-12 justify-content-center"> </div>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
@@ -263,7 +269,7 @@ $Krans = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 8");
   <div class='card-body'>
     <h5 class='card-title'>" . $produkt -> prodNavn . "</h5>
     <p class='card-text'><span>" . $produkt->prodBeskrivelse . "</span><span class='prodPris'>" . $produkt -> prodPris . "</span></p>
-    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Se detaljer</a>
+    <a href='linknavn/" . $produkt -> prodId . "' class='btn2'>Tilføj til kurv</a>
   </div>
   </div>
 </div>";

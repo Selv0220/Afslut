@@ -163,6 +163,7 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
         color: white;
     }
 
+
 </style>
 
 <body style="background: #EFE8DE">
@@ -171,47 +172,59 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
 
 <div class="container">
     <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn">klik her</button>
+    <a href="#BBP">
+        <button class="btn">klik her</button> </a>
 
     <p>
-       Brudebuket <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       Brudebuket <br> Brudebuketten er brudens vigtigste accessorie. For at vælge en brudebuket, der passer til bruden og bruden kjole er der flere forhold at tage stilling til.
+        Det handler om bukettens form, farve, stil og valg af blomster.
+        Se vores udvalg her og lad dig inspirere.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        Knaphulsbuket <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Knaphulsbuket <br> Knaphulsbuketten er en lille blomst, som brudgommen bærer på sit venstre jakkerevers under brylluppet, også kaldt brystbuket.
+        Den kan se ud på mange forskellige måde men er ofte i samme stil som brudebuketten.
+        Den er sammensæt med en nål som sættes på manden revers.
+        Se vores udvalg her og lad dig inspirere.
     </p>
 
     <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn1">klik her</button>
+    <a href="#KP">
+        <button class="btn1">klik her</button> </a>
 </div>
 <br>
 
 <div class="container">
     <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn">klik her</button>
-
+    <a href="#HP">
+        <button class="btn">klik her</button> </a>
     <p>
-        Hårkrans <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Hårkrans <br>dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </div>
 <br>
 
 <div class="container">
     <p>
-        Brudepige <br> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Brudepige <br> dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
     <img src="images/DF_bryl.jpg" alt="Wedding">
-    <button class="btn1">klik her</button>
+    <a href="#BP">
+    <button class="btn1">klik her</button> </a>
 </div>
 <br>
 
-<br>
-<h2>Brudebuketter</h2>
-<div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
+<br id="BBP" class="my-5 py-5">
+<h2>Brudebuket</h2>
+<div class="col-12 bg-danger opacity-25 py-1 justify-content-center" > </div>
 <br>
 
 <div class="row col-10 col-2 p-2 mx-auto my-5 my-lg-3 text-center">
@@ -230,7 +243,7 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
     ?>
 </div>
 
-<br>
+<br id="KP" class="my-5 py-5">
 <h2>Knaphulsbuketter</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -251,7 +264,7 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
     ?>
 </div>
 
-<br>
+<br id="HP" class="my-5 py-5">
 <h2>Hårkrans</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -272,7 +285,7 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
     ?>
 </div>
 
-<br>
+<br id="BP" class="my-5 py-5">
 <h2>Brudepige</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -307,6 +320,8 @@ $brud = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 4");
         }
     }
 </script>
+
+
 
 </body>
 

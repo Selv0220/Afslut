@@ -171,7 +171,8 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
 
 <div class="container">
     <img src="images/AS_valen.jpg" alt="Anled">
-    <button class="btn">klik her</button>
+    <a href="#FD">
+        <button class="btn">klik her</button> </a>
 
     <p>
         Fødselsdag <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -185,13 +186,15 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
     </p>
 
     <img src="images/AS_valen.jpg" alt="Anled">
-    <button class="btn1">klik her</button>
+    <a href="#ST">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
 <div class="container">
     <img src="images/AS_valen.jpg" alt="Anled">
-    <button class="btn">klik her</button>
+    <a href="#VD">
+        <button class="btn">klik her</button></a>
 
     <p>
         Valentines dag <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -205,11 +208,12 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
     </p>
 
     <img src="images/AS_valen.jpg" alt="Anled">
-    <button class="btn1">klik her</button>
+    <a href="#KN">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
-<br>
+<br id="FD" class="my-5 py-5">
 <h2>Fødselsdag</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -230,7 +234,7 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
     ?>
 </div>
 
-<br>
+<br id="ST" class="my-5 py-5">
 <h2>Student</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -251,7 +255,7 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
     ?>
 </div>
 
-<br>
+<br id="VD" class="my-5 py-5">
 <h2>Valentines dag</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -272,7 +276,7 @@ $Fods = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 11");
     ?>
 </div>
 
-<br>
+<br id="KN" class="my-5 py-5">
 <h2>Kondulance</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>

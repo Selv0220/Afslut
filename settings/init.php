@@ -4,10 +4,10 @@ require "classes/classDB.php";
 define("CONFIG_LIVE", "0"); // 0: Test enviroment || 1: Live enviroment
 
 if(CONFIG_LIVE == 0){
-    $DB_SERVER = "astelun.com.mysql";
-    $DB_NAME = "astelun_combotanica_blomster";
-    $DB_USER = "astelun_combotanica_blomster";
-    $DB_PASS = "ingenkode";
+    $DB_SERVER = "localhost";
+    $DB_NAME = "webshop";
+    $DB_USER = "root";
+    $DB_PASS = "";
 }else{
     $DB_SERVER = "";
     $DB_NAME = "";

@@ -169,7 +169,8 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
 
 <div class="container">
     <img src="images/EK_choco.jpg" alt="Til">
-    <button class="btn">klik her</button>
+    <a href="#V">
+        <button class="btn">klik her</button></a>
 
     <p>
         Vin <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -183,13 +184,15 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     </p>
 
     <img src="images/EK_choco.jpg" alt="Til">
-    <button class="btn1">klik her</button>
+    <a href="#B">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
 <div class="container">
     <img src="images/EK_choco.jpg" alt="Til">
-    <button class="btn">klik her</button>
+    <a href="#CH">
+        <button class="btn">klik her</button></a>
 
     <p>
         Chokolade <br>dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -203,11 +206,12 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     </p>
 
     <img src="images/EK_choco.jpg" alt="Til">
-    <button class="btn1">klik her</button>
+    <a href="#DV">
+        <button class="btn1">klik her</button></a>
 </div>
 <br>
 
-<br>
+<br id="B" class="my-5 py-5">
 <h2>Bamser</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>
@@ -228,7 +232,7 @@ $Choko = $db ->sql("SELECT * FROM produkter WHERE prodCatagoryId = 10");
     ?>
 </div>
 
-<br>
+<br id="CH" class="my-5 py-5">
 <h2>Chokolade</h2>
 <div class="col-12 bg-danger opacity-25 py-1 justify-content-center"> </div>
 <br>

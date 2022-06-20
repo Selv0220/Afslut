@@ -63,7 +63,7 @@
 
         </div>
         <div class="col-6 m-0 p-0 toppen">
-            <img src="images/annie-splash.png" alt="Blomster billede" class="img-fluid vh-100 float-lg-end">
+            <img src="images/Plante.webp" alt="Blomster billede" class="img-fluid vh-100 float-lg-end">
         </div>
     </div>
 </div>
@@ -143,7 +143,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="images/annie-splash.png" class="d-block w-75 mx-auto" alt="Plante">
+                <img src="images/Plante.webp" class="d-block w-75 mx-auto" alt="Plante">
             </div>
             <div class="carousel-item" data-bs-interval="5000">
                 <img src="images/hero_varer.jpg" class="d-block w-75 mx-auto" alt="Butik">
